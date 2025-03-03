@@ -3,7 +3,7 @@ Contributors: publishpress, kevinB, stevejburge, andergmartins, olatechpro, ojop
 Tags: category, tag, taxonomy, categories, tag cloud
 Requires at least: 3.3
 Tested up to: 6.7
-Stable tag: 3.31.0
+Stable tag: 3.32.0
 Requires PHP: 7.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -268,7 +268,13 @@ IBW Watson is one of the most powerful AI tools available today. The TaxoPress A
 
 == Changelog ==
 
-v3.31.0- 2025-02-26
+v3.32.0- 2025-03-03
+* Fixed: PHP Parse error: syntax error, unexpected ‘=>’ on PHP 5.6 or lower, #2505
+* Fixed: Maximum terms to display, #2504
+* Update: Enable select2 search on autoterms schedule and Terms Display page, #2507
+* Update: TaxoPress v.3.31.0 Translation Update ES-FR-IT, #2503
+
+v3.31.0- 2025-02-27
 * Feature: Allow users to set a custom URL for Auto Links, #2470
 * Feature: Allow users to create tags manually via the metabox, #2085
 * Update: Add custom taxonomies to "Remove Default Metaboxes" settings option, #2456
