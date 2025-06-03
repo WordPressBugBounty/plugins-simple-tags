@@ -3,7 +3,7 @@
         'name' => 'taxopress/simple-tags',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'eb6d82474133b2c340f1caf7a645821543d655eb',
+        'reference' => '85d5df91acb5277c96258fb3c69df8e97124f000',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -49,7 +49,7 @@
         'taxopress/simple-tags' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'eb6d82474133b2c340f1caf7a645821543d655eb',
+            'reference' => '85d5df91acb5277c96258fb3c69df8e97124f000',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
