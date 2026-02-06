@@ -347,6 +347,8 @@ function taxopress_update_autoterm($data = [])
                     } else {
                         $new_value[$option_key] = '';//invalid expression
                     }
+                } elseif ($option_key === 'post_types' || $option_key === 'post_status') {
+                    $new_value[$option_key] = taxopress_sanitize_post_type_status($option_value);
                 } else {
                     $new_value[$option_key] = taxopress_sanitize_text_field($option_value);
                 }
@@ -624,7 +626,7 @@ function taxopress_autoterms_logs_data($per_page = 20, $current_page = 1, $order
     if ($schedule_query) {
         $meta_query[] = array(
             'key' => '_taxopress_log_action',
-            'value' => ['daily_cron_schedule', 'hourly_cron_schedule'],
+            'value' => ['daily_cron_schedule', 'hourly_cron_schedule', 'weekly_cron_schedule'],
             'compare' => 'IN'
         );
     }

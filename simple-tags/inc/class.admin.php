@@ -121,8 +121,11 @@ class SimpleTags_Admin
 			require STAGS_DIR . '/inc/autoterms-logs-table.php';
 			require STAGS_DIR . '/inc/autoterms.php';
 			require STAGS_DIR . '/inc/autoterms_content.php';
+			require STAGS_DIR . '/inc/schedule.php';
+			require STAGS_DIR . '/inc/schedule-logs-table.php';
 			SimpleTags_Autoterms::get_instance();
 			SimpleTags_Autoterms_Content::get_instance();
+			SimpleTags_Autoterms_Schedule::get_instance();
 			self::$enabled_menus['st_autoterms'] = esc_html__('Auto Terms', 'simple-tags');
 		}
 
@@ -609,6 +612,14 @@ class SimpleTags_Admin
 			return;
 		}
 
+		if ( (int) SimpleTags_Plugin::get_option_value( 'disable_admin_frontend_scripts' ) === 1 ) {
+			return;
+		}
+
+		if ( ! apply_filters( 'taxopress_load_admin_frontend_scripts', true ) ) {
+			return;
+		}
+
 		// Register and enqueue assets
 		wp_register_script('taxopress-frontend-js', STAGS_URL . '/assets/frontend/js/frontend.js', array('jquery'), STAGS_VERSION);
 		wp_register_style('taxopress-frontend-css', STAGS_URL . '/assets/frontend/css/frontend.css', array(), STAGS_VERSION, 'all');
@@ -628,7 +639,7 @@ class SimpleTags_Admin
 		global $pagenow;
 
     $select_2_page = false;
-		if ((isset($_GET['page']) && in_array($_GET['page'], ['st_posts', 'st_autolinks', 'st_autoterms', 'st_autoterms_schedule', 'st_terms_display', 'st_related_posts', 'st_post_tags'])) || in_array($pagenow, ['post.php', 'edit.php', 'post-new.php'])) {
+		if ((isset($_GET['page']) && in_array($_GET['page'], ['st_posts', 'st_autolinks', 'st_autoterms', 'st_autoterms_schedule', 'st_terms_display', 'st_related_posts', 'st_post_tags', 'st_mass_terms'])) || in_array($pagenow, ['post.php', 'edit.php', 'post-new.php'])) {
 			$select_2_page = true;
 		}
 
@@ -739,6 +750,7 @@ class SimpleTags_Admin
 			'enable_add_terms_slug' => SimpleTags_Plugin::get_option_value('enable_add_terms_slug'),
 			'enable_remove_terms_slug' => SimpleTags_Plugin::get_option_value('enable_remove_terms_slug'),
 			'enable_rename_terms_slug' => SimpleTags_Plugin::get_option_value('enable_rename_terms_slug'),
+            'enable_mass_edit_terms_slug' => SimpleTags_Plugin::get_option_value('enable_mass-edit_terms_slug'),
 			'select_post_label'        => esc_html__('Search Posts...', 'simple-tags'),
 			'loading'                  => esc_html__('Loading...', 'simple-tags'),
 			'preview_error'            => esc_html__('Error loading preview', 'simple-tags'),
@@ -750,6 +762,21 @@ class SimpleTags_Admin
 			'select_image_label' => esc_html__('Select Media', 'simple-tags'),
 			'change_image_label' => esc_html__('Change Media', 'simple-tags'),
 			'use_default_label' => esc_html__('Use Default', 'simple-tags'),
+            'see_more_suggestions' => esc_html__('See More', 'simple-tags'),
+            'see_less_suggestions' => esc_html__('See Less', 'simple-tags'),
+            'apply_selected' => esc_html__('Apply Selected', 'simple-tags'),
+            'close_suggestions' => esc_html__('Close', 'simple-tags'),
+            'select_suggestion_alert' => esc_html__('Please select at least one suggestion to apply.', 'simple-tags'),
+			'multiple_merge_warning' => esc_html__('You have selected multiple merge suggestions. All selected terms will be merged into a single new term. Do you want to continue?', 'simple-tags'),
+            'no_merge_suggestions' => esc_html__('No merge suggestions found for this taxonomy.', 'simple-tags'),
+            'suggested_terms_title' => esc_html__('Suggested Terms to Merge:', 'simple-tags'),
+            'duplicates_text' => esc_html__('duplicates', 'simple-tags'),
+            'reason_text' => esc_html__('Reason:', 'simple-tags'),
+            'select_all_label' => esc_html__('Select All', 'simple-tags'),
+            'deselect_all_label' => esc_html__('Deselect All', 'simple-tags'),
+            'terms_to_merge_text' => esc_html__('Terms to Merge', 'simple-tags'),
+            'new_term_text' => esc_html__('New Term', 'simple-tags'),
+            'reasons_text' => esc_html__('Reasons', 'simple-tags'),
 		]);
 
 
@@ -843,89 +870,105 @@ class SimpleTags_Admin
 
 				$sanitized_options = [];
 
-				// add taxopress ai post type and taxonomies options so we can have all post types. TODO: This need to be a filter
-				foreach (get_post_types(['public' => true], 'names') as $post_type => $post_type_object) {
-					if ($post_type == 'post') {
-						$opt_default_value = 'post_tag';
-					} else {
-						$opt_default_value = 0;
-					}
-					$options['taxopress_ai_' . $post_type . '_metabox_default_taxonomy'] = $opt_default_value;
-					$options['taxopress_ai_' . $post_type . '_metabox_display_option'] = 'default';
-					$options['taxopress_ai_' . $post_type . '_support_private_taxonomy'] = 0;
-					
-					$options['taxopress_ai_' . $post_type . '_metabox_orderby'] = 'count';
-					$options['taxopress_ai_' . $post_type . '_metabox_order'] = 'desc';
-					$options['taxopress_ai_' . $post_type . '_metabox_maximum_terms'] = 45;
-					$options['taxopress_ai_' . $post_type . '_metabox_show_post_count'] = 0;
+                $is_fast_update_submission = isset($_GET['page']) && $_GET['page'] === 'st_taxopress_ai';
 
-					$options['taxopress_ai_' . $post_type . '_minimum_term_length'] = 2;
-					$options['taxopress_ai_' . $post_type . '_maximum_term_length'] = 40;
+                // This settings has been migrated to fast update screen so only update from there
+                if ($is_fast_update_submission) {
+                    // add taxopress ai post type and taxonomies options so we can have all post types. TODO: This need to be a filter
+                    foreach (get_post_types(['public' => true], 'names') as $post_type => $post_type_object) {
+                        if ($post_type == 'post') {
+                            $opt_default_value = 'post_tag';
+                        } else {
+                            $opt_default_value = 0;
+                        }
+                        $options['taxopress_ai_' . $post_type . '_metabox_default_taxonomy'] = $opt_default_value;
+                        $options['taxopress_ai_' . $post_type . '_metabox_display_option'] = 'default';
+                        $options['taxopress_ai_' . $post_type . '_support_private_taxonomy'] = 0;
 
+                        $options['taxopress_ai_' . $post_type . '_metabox_orderby'] = 'count';
+                        $options['taxopress_ai_' . $post_type . '_metabox_order'] = 'desc';
+                        $options['taxopress_ai_' . $post_type . '_metabox_maximum_terms'] = 45;
+                        $options['taxopress_ai_' . $post_type . '_metabox_show_post_count'] = 0;
+                        $options['taxopress_ai_' . $post_type . '_metabox_show_term_slug'] = 0;
 
-					$options['taxopress_ai_' . $post_type . '_exclusions'] = '';
-					$options['enable_taxopress_ai_' . $post_type . '_metabox'] = $opt_default_value;
-                    $options['taxopress_ai_' . $post_type . '_metabox_filters'] = 1;
-					foreach (['post_terms', 'existing_terms', 'suggest_local_terms', 'create_terms'] as $taxopress_ai_tab) {
-						$options['enable_taxopress_ai_' . $post_type . '_' . $taxopress_ai_tab . '_tab'] = $opt_default_value;
-					}
-				}
+                        $options['taxopress_ai_' . $post_type . '_minimum_term_length'] = 2;
+                        $options['taxopress_ai_' . $post_type . '_maximum_term_length'] = 40;
 
-				// add metabox post type and taxonomies options so we can have all post types. TODO: This need to be a filter
-				foreach (taxopress_get_all_wp_roles() as $role_name => $role_info) {
-					if (in_array($role_name, ['administrator', 'editor', 'author', 'contributor'])) {
-						$enable_acess_default_value = 1;
-					} else {
-						$enable_acess_default_value = 0;
-					}
-					$options['enable_' . $role_name . '_metabox'] = $enable_acess_default_value;
-					$options['enable_restrict' . $role_name . '_metabox'] = $enable_acess_default_value;
-
-                    // ONLY admin + editor default to can edit
-                    if (!isset($options['enable_edit_' . $role_name . '_metabox'])) {
-                        $options['enable_edit_' . $role_name . '_metabox'] = in_array($role_name, ['administrator', 'editor']) ? 1 : 0;
+                        $options['taxopress_ai_' . $post_type . '_exclusions'] = '';
+                        $options['enable_taxopress_ai_' . $post_type . '_metabox'] = $opt_default_value;
+                        $options['taxopress_ai_' . $post_type . '_metabox_filters'] = 1;
+                        foreach (['post_terms', 'existing_terms', 'suggest_local_terms', 'create_terms'] as $taxopress_ai_tab) {
+                            $options['enable_taxopress_ai_' . $post_type . '_' . $taxopress_ai_tab . '_tab'] = $opt_default_value;
+                        }
                     }
 
-					$options['enable_metabox_' . $role_name . ''] = [];
-					$options['remove_taxonomy_metabox_' . $role_name . ''] = [];
-				}
+                    // add metabox post type and taxonomies options so we can have all post types. TODO: This need to be a filter
+                    foreach (taxopress_get_all_wp_roles() as $role_name => $role_info) {
+                        if (in_array($role_name, ['administrator', 'editor', 'author', 'contributor'])) {
+                            $enable_acess_default_value = 1;
+                        } else {
+                            $enable_acess_default_value = 0;
+                        }
+                        $options['enable_' . $role_name . '_metabox'] = $enable_acess_default_value;
+                        $options['enable_restrict' . $role_name . '_metabox'] = $enable_acess_default_value;
 
-				foreach ($options as $key => $value) {
-					// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-					$value = isset($_POST[$key]) ? $_POST[$key] : '';
+                        // ONLY admin + editor default to can edit
+                        if (!isset($options['enable_edit_' . $role_name . '_metabox'])) {
+                            $options['enable_edit_' . $role_name . '_metabox'] = in_array($role_name, ['administrator', 'editor']) ? 1 : 0;
+                        }
 
-					if (empty($value) && in_array($key, $dashboard_option_keys)) {
-						$value = SimpleTags_Plugin::get_option_value($key);
-					}
+                        $options['enable_metabox_' . $role_name . ''] = [];
+                        $options['remove_taxonomy_metabox_' . $role_name . ''] = [];
+                    }
+                }
 
-					if (!is_array($value)) {
-						$sanitized_options[$key] = taxopress_sanitize_text_field($value);
-					} else {
-						$sanitized_options[$key] = map_deep($value, 'sanitize_text_field');
-					}
-				}
-				$options = $sanitized_options;
+                foreach ($options as $key => $value) {
+                    // If this is NOT a Fast Update submission, preserve metabox/metabox-access keys
+                    if (!$is_fast_update_submission && preg_match('/^(enable_taxopress_ai_|taxopress_ai_|enable_.*_metabox|enable_restrict.*_metabox|enable_edit_.*_metabox|enable_metabox_|remove_taxonomy_metabox_)/', $key)) {
+                        // Keep existing value as-is
+                        if (!is_array($value)) {
+                            $sanitized_options[$key] = taxopress_sanitize_text_field($value);
+                        } else {
+                            $sanitized_options[$key] = map_deep($value, 'sanitize_text_field');
+                        }
+                        continue;
+                    }
 
-				SimpleTags_Plugin::set_option($options);
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+                    $post_value = isset($_POST[$key]) ? $_POST[$key] : '';
 
-				do_action('simpletags_settings_save_general_end');
-				do_action('taxopress_settings_saved');
+                    if (empty($post_value) && in_array($key, $dashboard_option_keys)) {
+                        $post_value = SimpleTags_Plugin::get_option_value($key);
+                    }
 
-				add_settings_error(__CLASS__, __CLASS__, esc_html__('Options saved', 'simple-tags'), 'updated taxopress-notice');
-			} elseif (isset($_POST['reset_options'])) {
-				check_admin_referer('updateresetoptions-simpletags');
+                    if (!is_array($post_value)) {
+                        $sanitized_options[$key] = taxopress_sanitize_text_field($post_value);
+                    } else {
+                        $sanitized_options[$key] = map_deep($post_value, 'sanitize_text_field');
+                    }
+                }
+                $options = $sanitized_options;
 
-				SimpleTags_Plugin::set_default_option();
+                SimpleTags_Plugin::set_option($options);
 
-				add_settings_error(__CLASS__, __CLASS__, esc_html__('TaxoPress options resetted to default options!', 'simple-tags'), 'updated taxopress-notice');
-			} else {
-				//add_settings_error(__CLASS__, __CLASS__, esc_html__('Settings updated', 'simple-tags'), 'updated');
-			}
-		}
+                do_action('simpletags_settings_save_general_end');
+                do_action('taxopress_settings_saved');
 
-		settings_errors(__CLASS__);
-		include STAGS_DIR . '/views/admin/page-settings.php';
-	}
+                add_settings_error(__CLASS__, __CLASS__, esc_html__('Options saved', 'simple-tags'), 'updated taxopress-notice');
+            } elseif (isset($_POST['reset_options'])) {
+                check_admin_referer('updateresetoptions-simpletags');
+
+                SimpleTags_Plugin::set_default_option();
+
+                add_settings_error(__CLASS__, __CLASS__, esc_html__('TaxoPress options resetted to default options!', 'simple-tags'), 'updated taxopress-notice');
+            } else {
+               //add_settings_error(__CLASS__, __CLASS__, esc_html__('Settings updated', 'simple-tags'), 'updated');
+            }
+        }
+
+        settings_errors(__CLASS__);
+        include STAGS_DIR . '/views/admin/page-settings.php';
+    }
 
 	/**
 	 * Get terms for a post, format terms for input and autocomplete usage
@@ -943,13 +986,40 @@ class SimpleTags_Admin
 			return '';
 		}
 
-		$terms = wp_get_post_terms($post_id, $taxonomy, array('fields' => 'names'));
-		if (empty($terms) || is_wp_error($terms)) {
-			return '';
-		}
+		$is_mass_edit_page = isset($_GET['page']) && $_GET['page'] === 'st_mass_terms';
+		$show_slug = SimpleTags_Plugin::get_option_value('enable_mass-edit_terms_slug');
+		
+		if ($is_mass_edit_page) {
+			$term_objects = wp_get_post_terms($post_id, $taxonomy);
+			if (empty($term_objects) || is_wp_error($term_objects)) {
+				return '';
+			}
+			
+			$terms = array();
+			foreach ($term_objects as $term) {
+				if ($show_slug) {
+					if (!empty($term->slug)) {
+						$terms[] = $term->name . ' (' . $term->slug . ')';
+					} else {
+						$terms[] = $term->name;
+					}
+				} else {
+					$terms[] = $term->name;
+				}
+			}
+			
+			$terms = join(', ', $terms);
+		} else {
 
-		$terms = array_unique($terms); // Remove duplicate
-		$terms = join(', ', $terms);
+            $terms = wp_get_post_terms($post_id, $taxonomy, array('fields' => 'names'));
+            if (empty($terms) || is_wp_error($terms)) {
+                return '';
+            }
+            
+            $terms = array_unique($terms);
+            $terms = join(', ', $terms);
+		}
+		
 		$terms = esc_attr($terms);
 		$terms = apply_filters('tags_to_edit', $terms);
 
@@ -1164,7 +1234,20 @@ class SimpleTags_Admin
 									<div class="' . $modal_wrapper_class . '">' . $modal_content . '</div>
 								</span>
 							</div>' . PHP_EOL;
-							break;
+						break;
+
+                    case 'multiselect_with_desc_top':
+                        $desc_html_tag = 'div';
+                        $input_type_array = array();
+                        $prefix = !empty($field_description) ? '<' . $desc_html_tag . ' class="stpexplan">' . $field_description . '</' . $desc_html_tag . '>' : '';
+                        foreach ($field_options as $option_key => $option_label) {
+                            $field_value = isset($option_actual[$field_id]) ? $option_actual[$field_id] : array();
+                            $selected_option = (is_array($field_value) && in_array($option_key, $field_value)) ? true : false;
+                            $input_type_array[] = '<label><input type="checkbox" id="' . esc_attr($field_id . '-' . $option_key) . '" name="' . esc_attr($field_id) . '[]" value="' . esc_attr($option_key) . '" ' . checked($selected_option, true, false) . ' /> ' . esc_html($option_label) . '</label><br />';
+                        }
+                        $input_type = $prefix . implode('', $input_type_array);
+                        $field_description = '';
+                        break;
 
 					case 'text-color':
 						$input_type = '<input type="text" id="' . $option[0] . '" name="' . $option[0] . '" value="' . esc_attr($option_actual[$option[0]]) . '" class="text-color ' . $option[3] . '" />' . PHP_EOL;
@@ -1200,14 +1283,14 @@ class SimpleTags_Admin
 				$extra_suffix = '';
 				if (!empty($option[4])) {
 					if ($option[2] == 'sub_multiple_checkbox') {
-						$extra_prefix = '<' . $desc_html_tag . ' class="stpexplan">' . __($option[4]) . '</' . $desc_html_tag . '>' . PHP_EOL;
+						$extra_prefix = '<' . $desc_html_tag . ' class="stpexplan">' . $option[4] . '</' . $desc_html_tag . '>' . PHP_EOL;
 					} else {
-						$extra_suffix = '<' . $desc_html_tag . ' class="stpexplan">' . __($option[4]) . '</' . $desc_html_tag . '>' . PHP_EOL;
+						$extra_suffix = '<' . $desc_html_tag . ' class="stpexplan">' . $option[4] . '</' . $desc_html_tag . '>' . PHP_EOL;
 					}
 				}
 
 				// Output
-				$output .= '<tr style="vertical-align: top;" class="' . $class . '"><th scope="row"><label for="' . $option[0] . '">' . __($option[1]) . '</label></th><td>'. $extra_prefix .' ' . $input_type . ' ' . $extra_suffix . '</td></tr>' . PHP_EOL;
+				$output .= '<tr style="vertical-align: top;" class="' . $class . '"><th scope="row"><label for="' . $option[0] . '">' . $option[1] . '</label></th><td>'. $extra_prefix .' ' . $input_type . ' ' . $extra_suffix . '</td></tr>' . PHP_EOL;
 			}
 			$output .= '</table>' . PHP_EOL;
 			$output .= '</fieldset>' . PHP_EOL;
@@ -1255,8 +1338,12 @@ class SimpleTags_Admin
 				return esc_html__('License', 'simple-tags');
 			case 'hidden_terms':
 				return esc_html__('Hidden Terms', 'simple-tags');
+			case 'frontend_scripts':
+				return esc_html__('Frontend Scripts', 'simple-tags');
 			case 'manage_terms':
 				return esc_html__('Manage Terms', 'simple-tags');
+            case 'mass_edit_terms':
+                return esc_html__('Mass Edit Terms', 'simple-tags');    
 			case 'core_linked_terms':
 				return esc_html__('Linked Terms', 'simple-tags');
 			case 'core_synonyms_terms':
@@ -1315,13 +1402,33 @@ class SimpleTags_Admin
 	 * @return array
 	 * @author WebFactory Ltd
 	 */
-	public static function getTermsForAjax($taxonomy = 'post_tag', $search = '', $order_by = 'name', $order = 'ASC', $limit = '')
+	public static function getTermsForAjax($taxonomy = 'post_tag', $search = '', $order_by = 'name', $order = 'ASC', $limit = 0)
 	{
 		global $wpdb;
 
-		if ($order_by === 'random') {
-			$order_by = 'RAND()';
+		$order = strtoupper($order);
+		if (!in_array($order, ['ASC', 'DESC'], true)) {
+			$order = 'ASC';
 		}
+
+		$allowed_orderby = [
+			'name'   => 't.name',
+			'count'  => 'tt.count',
+			'random' => 'RAND()',
+		];
+
+		if (isset($allowed_orderby[$order_by])) {
+			$order_by_sql = $allowed_orderby[$order_by];
+		} else {
+			$order_by_sql = $allowed_orderby['name'];
+		}
+
+		$limit_sql = '';
+		$limit = (int) $limit;
+		if ($limit > 0) {
+			$limit_sql = $wpdb->prepare('LIMIT 0, %d', $limit);
+		}
+
 		if ($taxonomy == 'linked_term_taxonomies') {
 			$taxonomies = SimpleTags_Plugin::get_option_value('linked_terms_taxonomies');
 			if (empty($taxonomies) || !is_array($taxonomies)) {
@@ -1339,17 +1446,17 @@ class SimpleTags_Admin
 					INNER JOIN {$wpdb->term_taxonomy} AS tt ON t.term_id = tt.term_id
 					WHERE tt.taxonomy IN ($taxonomies_list)
 					AND t.name LIKE %s
-					ORDER BY $order_by $order $limit
+					ORDER BY $order_by_sql $order $limit_sql
 					", '%' . $wpdb->esc_like($search) . '%'
 				);
 			} else {
 				$query = $wpdb->prepare("
-					SELECT DISTINCT t.name, t.term_id, tt.taxonomy
+					SELECT DISTINCT t.name, t.slug, t.term_id, tt.taxonomy
 					FROM {$wpdb->terms} AS t
 					INNER JOIN {$wpdb->term_taxonomy} AS tt ON t.term_id = tt.term_id
 					WHERE tt.taxonomy = %s
 					AND t.name LIKE %s
-					ORDER BY $order_by $order $limit
+					ORDER BY $order_by_sql $order $limit_sql
 				", $taxonomy, '%' . $wpdb->esc_like($search) . '%'
 				);
 			}
@@ -1361,16 +1468,16 @@ class SimpleTags_Admin
 					FROM {$wpdb->terms} AS t
 					INNER JOIN {$wpdb->term_taxonomy} AS tt ON t.term_id = tt.term_id
 					WHERE tt.taxonomy IN ($taxonomies_list)
-					ORDER BY $order_by $order $limit
+					ORDER BY $order_by_sql $order $limit_sql
 				";
 
 			} else {
 				$query = $wpdb->prepare("
-					SELECT DISTINCT t.name, t.term_id, tt.taxonomy
+					SELECT DISTINCT t.name, t.slug, t.term_id, tt.taxonomy
 					FROM {$wpdb->terms} AS t
 					INNER JOIN {$wpdb->term_taxonomy} AS tt ON t.term_id = tt.term_id
 					WHERE tt.taxonomy = %s
-					ORDER BY $order_by $order $limit
+					ORDER BY $order_by_sql $order $limit_sql
 				", $taxonomy);
 			}
 

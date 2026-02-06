@@ -58,8 +58,8 @@ class SimpleTags_Autoterms_Content
     {
         $hook = add_submenu_page(
             self::MENU_SLUG,
-            esc_html__('Existing Content', 'simple-tags'),
-            esc_html__('Existing Content', 'simple-tags'),
+            esc_html__('Auto Terms Existing', 'simple-tags'),
+            esc_html__('Auto Terms Existing', 'simple-tags'),
             'simple_tags',
             'st_autoterms_content',
             [
@@ -127,7 +127,7 @@ class SimpleTags_Autoterms_Content
 
         ?>
         <div class="wrap taxopress-split-wrap taxopress-autoterm-content">
-            <h1><?php echo esc_html__('Existing Content', 'simple-tags'); ?> </h1>
+            <h1><?php echo esc_html__('Auto Terms Existing Content', 'simple-tags'); ?> </h1>
             <div class="taxopress-description">
                 <?php esc_html_e('This feature can scan your existing content and automatically assign new and existing terms.', 'simple-tags'); ?>
             </div>
@@ -330,6 +330,7 @@ class SimpleTags_Autoterms_Content
                                     <div class="inside">
                                         <div id="minor-publishing">
                                             <div class="sidebar-body-wrap">
+                                                <p class="description"><?php echo sprintf(esc_html__('You can see full log details on the %1s screen', 'simple-tags'), '<a target="_blank" href="'.admin_url('admin.php?page=st_autoterms&tab=logs').'">'.esc_html__('Auto Terms Logs', 'simple-tags').'</a>'); ?></p>
                                                 <div class="submit-action">
                                                     <span class="spinner taxopress-spinner"></span>
                                                     <input type="submit" class="button taxopress-autoterm-all-content"

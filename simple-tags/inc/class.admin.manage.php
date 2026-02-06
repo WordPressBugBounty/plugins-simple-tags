@@ -29,6 +29,7 @@ class SimpleTags_Admin_Manage
         add_action('wp_ajax_taxopress_check_delete_terms', array( $this, 'handle_taxopress_check_delete_terms_ajax'));
         add_action('wp_ajax_taxopress_autocomplete_terms', [ $this, 'handle_taxopress_autocomplete_terms']);
         add_action('wp_ajax_taxopress_merge_terms_batch', [$this, 'taxopress_merge_terms_batch']);
+        add_action('wp_ajax_taxopress_merge_suggestions', [$this, 'handle_taxopress_merge_suggestions']);
 
     }
 
@@ -353,7 +354,8 @@ class SimpleTags_Admin_Manage
                                             <textarea type="text" class="autocomplete-input taxopress-expandable-textarea merge-feature-autocomplete" id="mergeterm_new" name="renameterm_new" size="80" data-taxo="<?php echo esc_attr(get_option('merge-terms_taxo')); ?>"></textarea>
                                         </p>
 
-                                        <input class="button-primary" type="submit" name="merge" id="merge-terms" value="<?php _e('Merge', 'simple-tags'); ?>" />
+                                        <input class="suggest-merge-terms" type="button" id="suggest-merge-terms" value="<?php _e('Suggest Terms to Merge', 'simple-tags'); ?>" />
+                                        <input class="button-primary" type="submit" name="merge" id="merge-terms" value="<?php _e('Merge Terms', 'simple-tags'); ?>" />
                                         <div id="merge-progress" style="margin-top: 10px;"></div>
                                     </form>
                                 </fieldset>
@@ -430,6 +432,26 @@ class SimpleTags_Admin_Manage
                 ?>
 
 					</table>
+
+                    <div class="remodal" data-remodal-id="taxopress-modal-merge-warning"
+                        data-remodal-options="hashTracking: false, closeOnOutsideClick: false">
+                        <div class="taxopress-merge-warning-title">
+                            <?php echo esc_html__('Multiple merge suggestions selected', 'simple-tags'); ?>
+                        </div>
+                        <div id="taxopress-modal-merge-warning-content">
+                            <?php echo esc_html__(
+                                'You have selected multiple merge suggestions. All selected terms will be merged into a single new term.',
+                                'simple-tags'
+                            ); ?>
+                        </div>
+                        <br>
+                        <button id="taxopress-merge-warning-cancel" data-remodal-action="cancel" class="button button-secondary remodal-cancel">
+                            <?php echo esc_html__('Cancel', 'simple-tags'); ?>
+                        </button>
+                        <button id="taxopress-merge-warning-confirm" class="button button-primary">
+                            <?php echo esc_html__('Continue', 'simple-tags'); ?>
+                        </button>
+                    </div>
 
 
 
@@ -589,7 +611,7 @@ class SimpleTags_Admin_Manage
                 return false;
             }
 
-            if (!empty($common_elements)) {
+            if (!empty($common_elements) && $merge_type !== 'different_name') {
                 add_settings_error(__CLASS__, __CLASS__, esc_html__('Term to merge and New Term must not contain same term.', 'simple-tags'), 'error taxopress-notice');
 
                 return false;
@@ -622,11 +644,18 @@ class SimpleTags_Admin_Manage
 
                 // Get terms ID from old terms names
                 $terms_id = array();
+                $found_terms = array();
                 foreach ((array) $old_terms as $old_tag) {
                     $term       = get_term_by('name', addslashes(sanitize_text_field($old_tag)), $taxonomy);
                     if ($term) {
                         $terms_id[] = (int) $term->term_id;
+                        $found_terms[] = $term->name;
                     }
+                }
+
+                if (empty($terms_id)) {
+                    add_settings_error(__CLASS__, __CLASS__, esc_html__('No matching terms found to merge.', 'simple-tags'), 'error taxopress-notice');
+                    return false;
                 }
 
                 // Get objects from terms ID
@@ -665,10 +694,18 @@ class SimpleTags_Admin_Manage
                 clean_object_term_cache($objects_id, $taxonomy);
                 clean_term_cache($terms_id, $taxonomy);
 
-                if ($counter == 0) {
-                    add_settings_error(__CLASS__, __CLASS__, esc_html__('No term merged.', 'simple-tags'), 'updated taxopress-notice');
+
+                if (empty($found_terms)) {
+                    add_settings_error(__CLASS__, __CLASS__, esc_html__('No terms were merged (terms may not exist).', 'simple-tags'), 'error taxopress-notice');
                 } else {
-                    add_settings_error(__CLASS__, __CLASS__, sprintf(esc_html__('Merge term(s) "%1$s" to "%2$s". %3$s posts edited.', 'simple-tags'), rtrim($old, ','), rtrim($new, ','), $counter), 'updated taxopress-notice');
+                    $message = sprintf(
+                        esc_html__('Successfully merged %1$d term(s) "%2$s" to "%3$s". %4$s posts updated.', 'simple-tags'), 
+                        count($found_terms),
+                        implode(', ', $found_terms), 
+                        rtrim($new, ','), 
+                        $counter
+                    );
+                    add_settings_error(__CLASS__, __CLASS__, $message, 'updated taxopress-notice');
                 }
             } else { // Error
                 add_settings_error(__CLASS__, __CLASS__, sprintf(esc_html__('Error. You need to enter a single term to merge to in new term name !', 'simple-tags'), $old), 'error taxopress-notice');
@@ -685,9 +722,175 @@ class SimpleTags_Admin_Manage
         }
     }
 
+    /**
+     * Find terms with same names but different slugs
+     */
+    public static function getSameNameMergeSuggestions($taxonomy = 'post_tag') {
+        global $wpdb;
+        
+        $query = $wpdb->prepare("
+            SELECT t.name, COUNT(*) as count, GROUP_CONCAT(CONCAT(t.name, ' (', t.slug, ')') SEPARATOR ', ') as terms
+            FROM {$wpdb->terms} t
+            INNER JOIN {$wpdb->term_taxonomy} tt ON t.term_id = tt.term_id
+            WHERE tt.taxonomy = %s
+            GROUP BY t.name
+            HAVING COUNT(*) > 1
+            ORDER BY count DESC, t.name ASC
+        ", $taxonomy);
+        
+        $results = $wpdb->get_results($query);
+        
+        $show_slug = (int) SimpleTags_Plugin::get_option_value('enable_merge_terms_slug');
+        
+        if (!$show_slug) {
+            foreach ($results as &$result) {
+                $result->terms = preg_replace('/\s*\([^)]+\)/', '', $result->terms);
+            }
+        }
+        
+        return $results;
+    }
+
+    /**
+     * Find terms that might be candidates for merging based on similarity
+     */
+    public static function getDifferentNameMergeSuggestions($taxonomy = 'post_tag', $limit = 50) {
+        global $wpdb;
+        
+        $terms = get_terms([
+            'taxonomy' => $taxonomy,
+            'hide_empty' => false,
+            'number' => $limit * 2,
+        ]);
+
+        $show_slug = (int) SimpleTags_Plugin::get_option_value('enable_merge_terms_slug');
+
+        $suggestions = [];
+        
+        foreach ($terms as $i => $term1) {
+            foreach ($terms as $j => $term2) {
+                if ($i >= $j) continue;
+                
+                $similarity_score = 0;
+                $reasons = [];
+                
+                // 1. Levenshtein distance (for typos)
+                $levenshtein = levenshtein(strtolower($term1->name), strtolower($term2->name));
+                if ($levenshtein <= 2 && $levenshtein > 0) {
+                    $similarity_score += 40;
+                    $reasons[] = esc_html__('Similar spelling', 'simple-tags');
+                }
+                
+                // 2. Soundex (phonetic similarity)
+                if (soundex($term1->name) === soundex($term2->name)) {
+                    $similarity_score += 30;
+                    $reasons[] = esc_html__('Sounds similar', 'simple-tags');
+                }
+                
+                // 3. Common words/partial matches
+                $words1 = explode(' ', strtolower($term1->name));
+                $words2 = explode(' ', strtolower($term2->name));
+                $common_words = array_intersect($words1, $words2);
+                if (!empty($common_words)) {
+                    $similarity_score += count($common_words) * 15;
+                    $reasons[] = sprintf(esc_html__('Shared words: %s', 'simple-tags'), implode(', ', $common_words));
+                }
+                
+                // 4. Prefix/suffix similarity
+                if (strpos($term1->name, $term2->name) !== false || strpos($term2->name, $term1->name) !== false) {
+                    $similarity_score += 25;
+                    $reasons[] = esc_html__('One contains the other', 'simple-tags');
+                }
+
+                if ($similarity_score >= 30) {
+                    $suggested_name = '';
+                    
+                    // Get clean term names for comparison
+                    $term1_clean = strtolower(trim($term1->name));
+                    $term2_clean = strtolower(trim($term2->name));
+
+                    if (!empty($common_words)) {
+                        $suggested_name = ucfirst(implode(' ', $common_words));
+                    } else {
+                        // Use the shorter term as base
+                        $suggested_name = strlen($term1->name) <= strlen($term2->name) ? $term1->name : $term2->name;
+                    }
+                    
+                    // let's make sure suggested name is different from both original terms
+                    $suggested_clean = strtolower(trim($suggested_name));
+                    if ($suggested_clean === $term1_clean || $suggested_clean === $term2_clean) {
+
+                        if (!empty($common_words)) {
+                            $suggested_name = ucfirst($common_words[0]);
+                        } else {
+                            $popular_term = ($term1->count >= $term2->count) ? $term1 : $term2;
+                            $suggested_name = $popular_term->name;
+                        }
+
+                        $suggested_clean = strtolower(trim($suggested_name));
+                    }
+
+                    $term1_display = $show_slug ? $term1->name . ' (' . $term1->slug . ')' : $term1->name;
+                    $term2_display = $show_slug ? $term2->name . ' (' . $term2->slug . ')' : $term2->name;
+                    
+                    $suggestions[] = [
+                        'term1' => $term1_display,
+                        'term2' => $term2_display,
+                        'score' => $similarity_score,
+                        'reasons' => implode(', ', $reasons),
+                        'suggested_name' => $suggested_name
+                    ];
+
+                }
+            }
+        }
+        
+        usort($suggestions, function($a, $b) {
+            return $b['score'] - $a['score'];
+        });
+        
+        return array_slice($suggestions, 0, $limit);
+    }
+
+    /**
+     * AJAX handler for merge suggestions
+     */
+    public function handle_taxopress_merge_suggestions() {
+        if (!current_user_can('simple_tags')) {
+            wp_send_json_error('Permission denied');
+        }
+        
+        if (!wp_verify_nonce($_POST['nonce'], 'simpletags_admin')) {
+            wp_send_json_error('Invalid nonce');
+        }
+        
+        $taxonomy = get_option('merge-terms_taxo', 'post_tag');
+        $merge_type = sanitize_text_field($_POST['merge_type']);
+        
+        if ($merge_type === 'same_name') {
+            $suggestions = self::getSameNameMergeSuggestions($taxonomy);
+            wp_send_json_success([
+                'type' => 'same_name',
+                'suggestions' => $suggestions
+            ]);
+        } else {
+            $suggestions = self::getDifferentNameMergeSuggestions($taxonomy);
+            wp_send_json_success([
+                'type' => 'different_name', 
+                'suggestions' => $suggestions
+            ]);
+        }
+    }
+
     public static function taxopress_merge_terms_batch() {
-        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'st-admin-js')) {
-            wp_send_json_error(['message' => __('Security check failed.', 'simple-tags')]);
+        $nonce = isset($_POST['nonce']) ? sanitize_text_field($_POST['nonce']) : '';
+        if (empty($nonce) || !wp_verify_nonce($nonce, 'st-admin-js')) {
+            wp_send_json_error(['message' => __('Security check failed.', 'simple-tags')], 403);
+            wp_die();
+        }
+
+        if (!current_user_can('simple_tags')) {
+            wp_send_json_error(['message' => __('Permission denied.', 'simple-tags')], 403);
             wp_die();
         }
     
@@ -715,6 +918,12 @@ class SimpleTags_Admin_Manage
                 'message' => __('Please enter a valid term. Merge cancelled.', 'simple-tags')
             ]);
             wp_die();
+        }
+
+        if ($merge_type === 'different_name' && !empty($new_term)) {
+            $old_terms = array_values(array_filter($old_terms, function($term_name) use ($new_term) {
+                return strtolower(trim($term_name)) !== strtolower(trim($new_term));
+            }));
         }
 
     
@@ -1238,11 +1447,15 @@ class SimpleTags_Admin_Manage
         ]);
     
         $results = [];
-        foreach ($terms as $term) {
-            $results[] = [
-                'name' => $term->name,
-                'slug' => $term->slug
-            ];
+        foreach ( $terms as $term ) {
+            $results[] = array(
+                'name' => html_entity_decode(
+                    $term->name,
+                    ENT_QUOTES,
+                    get_bloginfo( 'charset' )
+                ),
+                'slug' => $term->slug,
+            );
         }
     
         wp_send_json($results);

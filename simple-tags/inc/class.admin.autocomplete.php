@@ -115,22 +115,38 @@ class SimpleTags_Admin_Autocomplete {
 		// Format 
 		$results = array();
 		foreach ( (array) $terms as $term ) {
-			if ((int)$term->term_id === $exclude_term) {
+			if ((int) $term->term_id === $exclude_term) {
 				continue;
 			}
-			$term->name = stripslashes( $term->name );
+
+			$term->name    = stripslashes( $term->name );
 			$original_name = $term->name;
-			if ($taxonomy == 'linked_term_taxonomies') {
-				$term->name = $term->name . ' ('. $term->taxonomy .')';
+
+			$is_mass_edit_page = isset( $_GET['page'] ) && $_GET['page'] === 'st_mass_terms';
+			$show_slug         = SimpleTags_Plugin::get_option_value( 'enable_mass-edit_terms_slug' );
+			if ( $is_mass_edit_page && $show_slug && ! empty( $term->slug ) ) {
+				$term->name = $term->name . ' (' . $term->slug . ')';
 			}
+
+			if ( $taxonomy === 'linked_term_taxonomies' ) {
+				$term->name = $term->name . ' (' . $term->taxonomy . ')';
+			}
+
 			$term->name = str_replace( array( "\r\n", "\r", "\n" ), '', $term->name );
 
+			// Decode any HTML entities for display in autocomplete widgets.
+			$display_name = html_entity_decode(
+				$term->name,
+				ENT_QUOTES,
+				get_bloginfo( 'charset' )
+			);
+
 			$results[] = array(
-				'id'    => $term->term_id,
-				'label' => $term->name,
-				'value' => $term->name,
+				'id'       => $term->term_id,
+				'label'    => $display_name,
+				'value'    => $display_name,
 				'taxonomy' => $term->taxonomy,
-				'name' => $original_name,
+				'name'     => $original_name,
 			);
 		}
 
@@ -220,7 +236,7 @@ class SimpleTags_Admin_Autocomplete {
 		?>
 		<script type="text/javascript">
           <!--
-          st_init_autocomplete('.autocomplete-input', "<?php echo esc_url_raw(admin_url( 'admin-ajax.php?action=simpletags_autocomplete&stags_action=helper_js_collection&taxonomy=' . esc_attr($taxonomy) ) . '&nonce=' . wp_create_nonce( 'st-admin-js' )); ?>", <?php echo (int)$autocomplete_min; ?>)
+           st_init_autocomplete('.autocomplete-input', "<?php echo esc_url_raw(admin_url( 'admin-ajax.php?action=simpletags_autocomplete&stags_action=helper_js_collection&taxonomy=' . esc_attr($taxonomy) . '&page=st_mass_terms&nonce=' . wp_create_nonce( 'st-admin-js' ) )); ?>", <?php echo (int)$autocomplete_min; ?>)
           -->
 		</script>
 		<?php
@@ -259,6 +275,15 @@ class SimpleTags_Admin_Autocomplete {
           // Base URL leaves taxonomy blank so helper JS can replace it dynamically
           st_init_autocomplete(
               '.tagclouds-exclude',
+              "<?php echo esc_url_raw(
+                  admin_url(
+                      'admin-ajax.php?action=simpletags_autocomplete&stags_action=helper_js_collection&taxonomy=&nonce=' . wp_create_nonce('st-admin-js')
+                  )
+              ); ?>",
+              <?php echo (int) $autocomplete_min; ?>
+          );
+          st_init_autocomplete(
+              '.tagclouds-include',
               "<?php echo esc_url_raw(
                   admin_url(
                       'admin-ajax.php?action=simpletags_autocomplete&stags_action=helper_js_collection&taxonomy=&nonce=' . wp_create_nonce('st-admin-js')

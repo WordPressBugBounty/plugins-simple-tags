@@ -11,11 +11,11 @@ class ComposerStaticInit4391545f5a841c6c763f54eb9d2770b9
     );
 
     public static $prefixLengthsPsr4 = array (
-        'S' => 
+        'S' =>
         array (
             'Symfony\\Polyfill\\Ctype\\' => 23,
         ),
-        'P' => 
+        'P' =>
         array (
             'Psr\\Container\\' => 14,
             'PPVersionNotices\\' => 17,
@@ -23,24 +23,24 @@ class ComposerStaticInit4391545f5a841c6c763f54eb9d2770b9
     );
 
     public static $prefixDirsPsr4 = array (
-        'Symfony\\Polyfill\\Ctype\\' => 
+        'Symfony\\Polyfill\\Ctype\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
-        'Psr\\Container\\' => 
+        'Psr\\Container\\' =>
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
-        'PPVersionNotices\\' => 
+        'PPVersionNotices\\' =>
         array (
             0 => __DIR__ . '/..' . '/publishpress/wordpress-version-notices/src',
         ),
     );
 
     public static $prefixesPsr0 = array (
-        'P' => 
+        'P' =>
         array (
-            'Pimple' => 
+            'Pimple' =>
             array (
                 0 => __DIR__ . '/..' . '/pimple/pimple/src',
             ),

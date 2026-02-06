@@ -175,7 +175,7 @@ function taxopress_re_order_menu()
             }
 
             // Add separator 3 to menus
-            $separator2_positions = ['st_taxopress_ai', 'st_autoterms_content', 'st_autoterms_schedule', 'st_autoterms'];
+            $separator2_positions = ['st_autoterms_content', 'st_autoterms_schedule', 'st_autoterms'];
             foreach ($separator2_positions as $pos) {
                  $index = array_search($pos, array_column($taxopress_submenus, 2));
                 if ($index !== false) {
@@ -187,7 +187,7 @@ function taxopress_re_order_menu()
 
             if (!taxopress_is_pro_version()) {
                 // Add separator 4 to menus
-                $index = array_search('st_options', array_column($taxopress_submenus, 2));
+                $index = array_search('st_options', array_column($taxopress_submenus, 3));
                 if ($index !== false) {
                     $separator = taxopress_menu_separator('st_separator_end', 'simple_tags');
                     array_splice($taxopress_submenus, $index + 1, 0, [$separator]);
@@ -227,6 +227,10 @@ function init_simple_tags()
     new SimpleTags_Client();
     new SimpleTags_Client_TagCloud();
 
+    if (1 === (int) SimpleTags_Plugin::get_option_value('active_auto_terms')) {
+        new SimpleTags_Client_Schedule();
+    }
+
     // Admin and XML-RPC
     if (is_admin()) {
         require STAGS_DIR . '/inc/class.admin.php';
@@ -252,6 +256,7 @@ function taxopress_admin_pages()
         'st_autolinks',
         'st_autoterms',
         'st_autoterms_content',
+        'st_autoterms_schedule',
         'st_terms',
         'st_posts',
         'st_taxopress_ai'
@@ -445,6 +450,21 @@ function taxopress_sanitize_text_field($content)
 }
 
 
+/**
+ * Enhanced sanitization function specifically for post types and post status arrays
+ * to prevent SQL injection vulnerabilities
+ *
+ * @param array|string $data The data to sanitize
+ * @return array|string Sanitized data
+ */
+function taxopress_sanitize_post_type_status($data)
+{
+    if (is_array($data)) {
+        return array_map('sanitize_key', $data);
+    }
+    
+    return sanitize_key($data);
+}
 
 /**
  * Dashboard items
@@ -782,7 +802,13 @@ function can_manage_taxopress_metabox($user_id = false) {
 /**
  * Check if current user can manage metabox taxonomy
  */
-function can_manage_taxopress_metabox_taxonomy($taxonomy, $user_id = false) {
+function can_manage_taxopress_metabox_taxonomy($taxonomy, $user_id = false, $preview_role = '') {
+    
+     if (!empty($preview_role)) {
+         $role_options = (array) SimpleTags_Plugin::get_option_value('enable_metabox_' . $preview_role . '');
+         return in_array($taxonomy, $role_options, true);
+    }
+
     $can_manage = false;
 
     if (!$user_id) {
@@ -793,7 +819,7 @@ function can_manage_taxopress_metabox_taxonomy($taxonomy, $user_id = false) {
     if (is_object($user) && isset($user->roles)) {
         foreach ($user->roles as $role_name) {
             $role_options = (array) SimpleTags_Plugin::get_option_value('enable_metabox_' . $role_name . '');
-            if (in_array($taxonomy, $role_options)) {
+            if (in_array($taxonomy, $role_options, true)) {
                 $can_manage = true;
                 break;
             }
@@ -806,6 +832,7 @@ function can_manage_taxopress_metabox_taxonomy($taxonomy, $user_id = false) {
 
 /**
  * Check if current user can edit (rename) TaxoPress metabox labels.
+ * Only administrators can edit labels.
  *
  * @param int|false $user_id
  * @return bool
@@ -814,19 +841,9 @@ function can_edit_taxopress_metabox_labels($user_id = false) {
     if (!$user_id) {
         $user_id = get_current_user_id();
     }
-    $user = get_userdata($user_id);
-    $can_edit = false;
-    if (is_object($user) && !empty($user->roles)) {
-        foreach ($user->roles as $role_name) {
-            if (
-                !empty(SimpleTags_Plugin::get_option_value('enable_edit_' . $role_name . '_metabox'))
-            ) {
-                $can_edit = true;
-                break;
-            }
-        }
-    }
-    return apply_filters('taxopress_can_edit_metabox_labels', $can_edit, $user_id);
+    
+    // Check if user is an administrator
+    return user_can($user_id, 'administrator');
 }
 
 
@@ -907,8 +924,8 @@ function can_manage_taxopress_metabox_tabs($tabs) {
     if ($role_name) {
         $restrict_metabox = SimpleTags_Plugin::get_option_value('enable_restrict' . $role_name . '_metabox');
         if ($restrict_metabox && taxopress_is_current_user_role($role_name)) {
-            $tabs['post_terms']['enabled'] = false;
-            $tabs['suggest_local_terms']['enabled'] = false;
+            $tabs['post_terms']['enabled'] = true;
+            $tabs['suggest_local_terms']['enabled'] = true;
             $tabs['create_term']['enabled'] = false;
         }
     }
