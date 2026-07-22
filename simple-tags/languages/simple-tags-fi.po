@@ -1,0 +1,3650 @@
+# Copyright (C) 2026 TaxoPress
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: TaxoPress 3.51.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-07-20T15:44:27+00:00\n"
+"PO-Revision-Date: 2026-07-22 19:22+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: simple-tags\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: fi\n"
+
+#: simple-tags.php:4
+#: simple-tags.php:8
+#: modules/taxopress-ai/taxopress-ai.php:1303
+#. Plugin Name of the plugin
+#. Author of the plugin
+msgid "TaxoPress"
+msgstr "TaxoPress"
+
+#: simple-tags.php:5, fuzzy
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/simple-tags/"
+msgstr "https://wordpress.org/plugins/simple-tags/"
+
+#: simple-tags.php:6
+#. Description of the plugin
+msgid ""
+"TaxoPress allows you to create and manage Tags, Categories, and all your "
+"WordPress taxonomy terms."
+msgstr ""
+"TaxoPress mahdollistaa Tagien, Kategorioiden ja kaikkien WordPressin "
+"taksonomiasanojen luomisen ja hallinnan."
+
+#: simple-tags.php:9, fuzzy
+#. Author URI of the plugin
+msgid "https://taxopress.com"
+msgstr "https://taxopress.com"
+
+#: blocks/post-tags.php:63
+#: inc/related-posts-widget.php:141
+msgid "Here"
+msgstr "Täällä"
+
+#: blocks/post-tags.php:66
+msgid " Select current post"
+msgstr "Valitse nykyinen viesti"
+
+#: blocks/post-tags.php:67
+msgid "Current Posts (TaxoPress)"
+msgstr "Nykyiset viestit (TaxoPress)"
+
+#: blocks/related-posts.php:80
+#: blocks/tag-clouds.php:63
+#: inc/related-posts-widget.php:109
+msgid "this page."
+msgstr "tällä sivulla."
+
+#: blocks/related-posts.php:83
+msgid "Select related post"
+msgstr "Valitse liittyvä viesti"
+
+#: blocks/related-posts.php:84
+#: inc/related-posts-widget.php:19
+msgid "Related Posts (TaxoPress)"
+msgstr "Liittyvät viestit (TaxoPress)"
+
+#: blocks/tag-clouds.php:66
+msgid "Select Terms Display"
+msgstr "Valitse termit näyttö"
+
+#: blocks/tag-clouds.php:67
+msgid "Terms Display (TaxoPress)"
+msgstr "Termit näyttö (TaxoPress)"
+
+#: inc/related-posts-functions.php:167
+#: inc/related-posts-table.php:15
+#: inc/related-posts.php:73
+#: inc/related-posts.php:74
+#: inc/related-posts.php:131
+msgid "Related Posts"
+msgstr "Liittyvät viestit"
+
+#: inc/related-posts-functions.php:176
+msgid "No related posts."
+msgstr "Ei liittyviä viestejä."
+
+#: inc/related-posts-functions.php:262
+#: inc/schedule.php:173
+#: inc/tag-clouds-functions.php:245
+#: modules/taxopress-ai/taxopress-ai.php:181
+#: modules/taxopress-ai/taxopress-ai.php:311
+msgid "Settings updated successfully."
+msgstr "Asetukset päivitettiin onnistuneesti."
+
+#: inc/related-posts-functions.php:271
+msgid "Related Posts successfully deleted."
+msgstr "Liittyvät viestit poistettiin onnistuneesti."
+
+#: inc/related-posts-functions.php:366
+msgid "Related Posts not found."
+msgstr "Liittyviä viestejä ei löytynyt."
+
+#: inc/related-posts-table.php:14
+msgid "Related Post"
+msgstr "Liittyvä viesti"
+
+#: inc/related-posts-table.php:65
+#: inc/related-posts.php:382
+#: inc/tag-clouds-table.php:65
+#: inc/tag-clouds.php:377
+#: inc/terms-table.php:732
+#: inc/terms-table.php:739
+msgid "Title"
+msgstr "Otsikko"
+
+#: inc/related-posts-table.php:66
+#: inc/related-posts.php:502
+#: inc/schedule-logs-table.php:53
+#: inc/tag-clouds-table.php:66
+#: inc/tag-clouds.php:463
+#: inc/terms-table.php:742
+#: inc/terms-table.php:867
+msgid "Taxonomy"
+msgstr "Taxonomy"
+
+#: inc/related-posts-table.php:67
+#: inc/related-posts.php:341
+#: inc/related-posts.php:788
+#: inc/taxonomies.php:468
+#: inc/terms-table.php:743, fuzzy
+msgid "Post Types"
+msgstr "Post Types"
+
+#: inc/related-posts-table.php:68
+msgid "Automatic display"
+msgstr "Automaattinen näyttö"
+
+#: inc/related-posts-table.php:69
+#: inc/tag-clouds-table.php:69
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: inc/related-posts-table.php:91
+#: inc/tag-clouds-table.php:91
+msgid "No item avaliable."
+msgstr "Ei saatavilla olevaa kohdetta."
+
+#: inc/related-posts-table.php:276
+#: inc/tag-clouds-table.php:276
+#: inc/terms-table.php:1117
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:401
+#: modules/taxopress-ai/taxopress-ai.php:1496
+msgid "Edit"
+msgstr "Muokkaa"
+
+#: inc/related-posts-table.php:289
+#: inc/schedule-logs-table.php:79
+#: inc/tag-clouds-table.php:289
+#: inc/terms-table.php:800
+#: inc/terms-table.php:1159
+msgid "Delete"
+msgstr "Poista"
+
+#: inc/related-posts-table.php:349
+msgid "Current post type"
+msgstr "Nykyinen post type"
+
+#: inc/related-posts-table.php:351
+#: inc/tag-clouds-table.php:359
+msgid "All"
+msgstr "Kaikki"
+
+#: inc/related-posts-table.php:386
+#: includes-core/TaxopressCoreAdmin.php:627
+msgid "Default"
+msgstr "Oletusarvo"
+
+#: inc/related-posts-table.php:417
+#: inc/related-posts.php:638
+msgid "Homepage"
+msgstr "Etusivu"
+
+#: inc/related-posts-table.php:418
+#: inc/related-posts.php:639
+msgid "Blog display"
+msgstr "Blogin näyttö"
+
+#: inc/related-posts-table.php:419
+msgid "Single post display"
+msgstr "Yhden postin näyttö"
+
+#: inc/related-posts-table.php:420
+msgid "RSS feed"
+msgstr "RSS-syöte"
+
+#: inc/related-posts-table.php:430
+#: inc/related-posts.php:1329
+#: inc/tag-clouds.php:1092
+#: inc/taxonomies.php:1973
+msgid "No"
+msgstr "Ei"
+
+#: inc/related-posts-widget.php:22
+msgid "Taxopress Related Posts Shortcode"
+msgstr "TaxoPress Related Posts Shortcode"
+
+#: inc/related-posts-widget.php:112
+msgid "Related Posts are added on "
+msgstr "Related Posts lisätään "
+
+#: inc/related-posts-widget.php:120
+msgid "Select widget Related Posts."
+msgstr "Valitse widgetin Related Posts."
+
+#: inc/related-posts-widget.php:144
+msgid "No Related Posts shortcode available. Add new shortcode "
+msgstr "Ei saatavilla olevaa Related Posts shortcodea. Lisää uusi shortcode "
+
+#: inc/related-posts.php:96
+#: inc/schedule.php:58
+#: inc/tag-clouds.php:96
+#: inc/taxonomies.php:137
+#: inc/terms.php:197
+msgid "Number of items per page"
+msgstr "Kohteiden määrä sivulla"
+
+#: inc/related-posts.php:137
+msgid "Add New Related Post"
+msgstr "Lisää uusi Related Post"
+
+#: inc/related-posts.php:140
+msgid ""
+"The Related Posts feature works by checking for shared taxonomy terms. If "
+"your post has the terms “WordPress” and “Website”, then Related Posts will "
+"display other posts that also have the terms “WordPress” and “Website”."
+msgstr ""
+"Liitetyt artikkelit -toiminto toimii tarkistamalla yhteiset taksonomian "
+"termit. Jos artikkelisi sisältää termit \"WordPress\" ja \"Verkkosivusto\", "
+"niin Liitetyt artikkelit näyttää muut artikkelit, joissa on myös termit "
+"\"WordPress\" ja \"Verkkosivusto\"."
+
+#: inc/related-posts.php:147
+#: inc/tag-clouds.php:145
+#: inc/taxonomies.php:181
+#: inc/terms.php:291
+#. translators: %s: search keywords
+#, php-format
+msgid "Search results for &#8220;%s&#8221;"
+msgstr "Hakutulokset hakusanalle &#8220;%s&#8221;"
+
+#: inc/related-posts.php:159
+msgid "Search Related Posts"
+msgstr "Hae liitettyjä artikkeleita"
+
+#: inc/related-posts.php:170
+#: inc/schedule.php:485
+#: inc/tag-clouds.php:172
+#: inc/taxonomies.php:257
+#: inc/terms.php:324
+msgid "Description here."
+msgstr "Kuvaus tähän."
+
+#: inc/related-posts.php:234
+msgid "Manage Related Posts"
+msgstr "Hallitse liitettyjä artikkeleita"
+
+#: inc/related-posts.php:250
+msgid "Preview Related Posts"
+msgstr "Esikatselu liitetyistä artikkeleista"
+
+#: inc/related-posts.php:256
+#: inc/tag-clouds.php:270
+msgid "Toggle panel"
+msgstr "Vaihda paneelia"
+
+#: inc/related-posts.php:277
+#: modules/taxopress-ai/taxopress-ai.php:465
+msgid "Preview"
+msgstr "Esikatselu"
+
+#: inc/related-posts.php:300
+msgid "Edit Related Posts"
+msgstr "Muokkaa liitettyjä artikkeleita"
+
+#: inc/related-posts.php:307
+msgid "Add new Related Posts"
+msgstr "Lisää uusia liitettyjä artikkeleita"
+
+#: inc/related-posts.php:318
+msgid "To create more Related Posts, please upgrade to TaxoPress Pro."
+msgstr "Luodaksesi lisää liitettyjä artikkeleita, päivitä TaxoPress Pro:hon."
+
+#: inc/related-posts.php:324
+msgid ""
+"With TaxoPress Pro, you can create unlimited Related Posts. You can create "
+"Related Posts for any taxonomy and then display those Related Posts "
+"anywhere on your site."
+msgstr ""
+"TaxoPress Pro:n avulla voit luoda rajattomasti liitettyjä artikkeleita. "
+"Voit luoda liitettyjä artikkeleita mille tahansa taksonomialle ja näyttää "
+"nämä liitetyt artikkelit missä tahansa sivustollasi."
+
+#: inc/related-posts.php:337
+#: inc/tag-clouds.php:334
+#: inc/taxonomies.php:462
+msgid "General"
+msgstr "Yleiset"
+
+#: inc/related-posts.php:345
+msgid "Display"
+msgstr "Näyttö"
+
+#: inc/related-posts.php:349
+#: inc/tag-clouds.php:354
+msgid "Design"
+msgstr "Suunnittelu"
+
+#: inc/related-posts.php:353
+#: inc/tag-clouds.php:346
+msgid "Layout"
+msgstr "Asettelu"
+
+#: inc/related-posts.php:357
+#: inc/related-posts.php:724
+#: inc/tag-clouds-table.php:68
+#: inc/tag-clouds.php:670
+msgid "Display format"
+msgstr "Näyttömuoto"
+
+#: inc/related-posts.php:361
+#: inc/tag-clouds.php:342
+msgid "Options"
+msgstr "Vaihtoehdot"
+
+#: inc/related-posts.php:365
+#: inc/taxonomies.php:491
+msgid "Advanced"
+msgstr "Lisäasetukset"
+
+#: inc/related-posts.php:401
+#: inc/related-posts.php:558
+#: inc/related-posts.php:992
+#: inc/schedule.php:322
+#: inc/tag-clouds.php:397
+#: inc/tag-clouds.php:741
+#: inc/tag-clouds.php:779
+#: inc/tag-clouds.php:852
+#: inc/taxonomies.php:619
+#: inc/taxonomies.php:749
+#: inc/taxonomies.php:763
+#: inc/taxonomies.php:877
+#: inc/taxonomies.php:917
+#: inc/taxonomies.php:944
+#: inc/taxonomies.php:981
+#: inc/taxonomies.php:1005
+#: inc/taxonomies.php:1029
+#: inc/taxonomies.php:1054
+#: inc/taxonomies.php:1078
+#: inc/taxonomies.php:1105
+#: inc/taxonomies.php:1572
+#: inc/taxonomies.php:1643
+#: inc/taxonomies.php:1670
+#: inc/taxonomies.php:1697
+msgid "False"
+msgstr "Epätosi"
+
+#: inc/related-posts.php:406
+#: inc/related-posts.php:563
+#: inc/related-posts.php:997
+#: inc/schedule.php:327
+#: inc/tag-clouds.php:402
+#: inc/tag-clouds.php:746
+#: inc/tag-clouds.php:784
+#: inc/tag-clouds.php:856
+#: inc/taxonomies.php:624
+#: inc/taxonomies.php:754
+#: inc/taxonomies.php:767
+#: inc/taxonomies.php:881
+#: inc/taxonomies.php:921
+#: inc/taxonomies.php:949
+#: inc/taxonomies.php:985
+#: inc/taxonomies.php:1009
+#: inc/taxonomies.php:1033
+#: inc/taxonomies.php:1059
+#: inc/taxonomies.php:1083
+#: inc/taxonomies.php:1110
+#: inc/taxonomies.php:1576
+#: inc/taxonomies.php:1647
+#: inc/taxonomies.php:1674
+#: inc/taxonomies.php:1701
+msgid "True"
+msgstr "Tosi"
+
+#: inc/related-posts.php:416
+msgid "Hide title in output ?"
+msgstr "Piilota otsikko tulosteessa?"
+
+#: inc/related-posts.php:428
+#: inc/schedule-logs-table.php:192
+msgid "None"
+msgstr "Ei mitään"
+
+#: inc/related-posts.php:432, fuzzy
+msgid "H1"
+msgstr "H1"
+
+#: inc/related-posts.php:436, fuzzy
+msgid "H2"
+msgstr "H2"
+
+#: inc/related-posts.php:440, fuzzy
+msgid "H3"
+msgstr "H3"
+
+#: inc/related-posts.php:444, fuzzy
+msgid "H4"
+msgstr "H4"
+
+#: inc/related-posts.php:449, fuzzy
+msgid "H5"
+msgstr "H5"
+
+#: inc/related-posts.php:453, fuzzy
+msgid "H6"
+msgstr "H6"
+
+#: inc/related-posts.php:467
+msgid "Title header"
+msgstr "Otsikkopää"
+
+#: inc/related-posts.php:521
+#: inc/tag-clouds.php:813
+msgid "Font size minimum"
+msgstr "Kirjasinkoko minimissä"
+
+#: inc/related-posts.php:531
+#: inc/tag-clouds.php:823
+msgid "Font size maximum"
+msgstr "Kirjasinkoko maksimi"
+
+#: inc/related-posts.php:538
+#: inc/tag-clouds.php:830
+msgid "Point"
+msgstr "Piste"
+
+#: inc/related-posts.php:539
+#: inc/tag-clouds.php:831
+msgid "Pixel"
+msgstr "Pikseli"
+
+#: inc/related-posts.php:540
+#: inc/tag-clouds.php:832, fuzzy
+msgid "Em"
+msgstr "Em"
+
+#: inc/related-posts.php:541
+#: inc/tag-clouds.php:833
+msgid "Percent"
+msgstr "Prosentti"
+
+#: inc/related-posts.php:550
+#: inc/tag-clouds.php:842
+msgid "Unit font size"
+msgstr "Yksikkö kirjasinkoko"
+
+#: inc/related-posts.php:574
+#: inc/tag-clouds.php:873
+msgid "Enable colors for terms"
+msgstr "Ota värit käyttöön termeille"
+
+#: inc/related-posts.php:584
+#: inc/tag-clouds.php:883
+msgid "Font color minimum"
+msgstr "Kirjainväri minimissä"
+
+#: inc/related-posts.php:585
+msgid "This is the color of the least popular term."
+msgstr "Tämä on vähiten suositun termin väri."
+
+#: inc/related-posts.php:595
+#: inc/tag-clouds.php:894
+msgid "Font color maximum"
+msgstr "Fontin väri enimmäismäärä"
+
+#: inc/related-posts.php:596
+msgid "This is the color of the most popular term."
+msgstr "Tämä on suosituimman termin väri."
+
+#: inc/related-posts.php:640
+msgid "Posts"
+msgstr "Viestit"
+
+#: inc/related-posts.php:653
+msgid "Maximum related posts to display"
+msgstr "Näytettävien liittyvien viestien enimmäismäärä"
+
+#: inc/related-posts.php:657
+msgid "Specify the number of related posts to display."
+msgstr "Määritä näytettävien liittyvien viestien määrä."
+
+#: inc/related-posts.php:661
+msgid "Attempt to automatically display related posts"
+msgstr "Yritä automaattisesti näyttää liittyviä viestejä"
+
+#: inc/related-posts.php:664
+msgid ""
+"TaxoPress will attempt to automatically display related posts in this "
+"content. It may not be successful for all post types and layouts."
+msgstr ""
+"TaxoPress yrittää automaattisesti näyttää liittyviä viestejä tässä "
+"sisällössä. Se ei välttämättä onnistu kaikille viestityypeille ja "
+"asetteluilla."
+
+#: inc/related-posts.php:713
+msgid "Box List"
+msgstr "Laatikkoluettelo"
+
+#: inc/related-posts.php:714
+#: inc/tag-clouds-table.php:377
+#: inc/tag-clouds.php:656
+msgid "Unordered List (UL/LI)"
+msgstr "Epäjärjestetty luettelo (UL/LI)"
+
+#: inc/related-posts.php:715
+#: inc/tag-clouds-table.php:378
+#: inc/tag-clouds.php:657
+msgid "Ordered List (OL/LI)"
+msgstr "Järjestetty luettelo (OL/LI)"
+
+#: inc/related-posts.php:744
+#: inc/tag-clouds.php:939
+msgid "Term link format"
+msgstr "Termin linkkimuoto"
+
+#: inc/related-posts.php:745
+#, php-format
+msgid ""
+"This settings allows to customize the appearance of Related Post links. You "
+"can find tokens and explanations in the sidebar and %1sin the "
+"documentation%2s."
+msgstr ""
+"Tämä asetus mahdollistaa liittyvien viestilinkkien ulkoasun mukauttamisen. "
+"Löydät tokenit ja selitykset sivupalkista ja %1%s dokumentaatiosta %2%s."
+
+#: inc/related-posts.php:791
+msgid "TaxoPress will display related posts from selected post types."
+msgstr "TaxoPress näyttää liittyviä viestejä valituista viestityypeistä."
+
+#: inc/related-posts.php:845
+msgid "Text to display before posts list"
+msgstr "Teksti, joka näytetään ennen viestiluetteloa"
+
+#: inc/related-posts.php:849
+msgid "Enter the text that should be displayed before the posts list."
+msgstr "Syötä teksti, joka pitäisi näyttää ennen viestiluetteloa."
+
+#: inc/related-posts.php:861
+msgid "Text to display after posts list"
+msgstr "Teksti, joka näytetään viestiluettelon jälkeen"
+
+#: inc/related-posts.php:865
+msgid "Enter the text that should be display after the posts list."
+msgstr "Syötä teksti, joka pitäisi näyttää viestiluettelon jälkeen."
+
+#: inc/related-posts.php:876
+#: inc/tag-clouds.php:605
+msgid "24 hours"
+msgstr "24 tuntia"
+
+#: inc/related-posts.php:880
+#: inc/tag-clouds.php:606
+msgid "7 days"
+msgstr "7 päivää"
+
+#: inc/related-posts.php:884
+#: inc/tag-clouds.php:607
+msgid "2 weeks"
+msgstr "2 viikkoa"
+
+#: inc/related-posts.php:888
+#: inc/tag-clouds.php:608
+#: review-request/review.php:298
+msgid "1 month"
+msgstr "1 kuukausi"
+
+#: inc/related-posts.php:892
+#: inc/tag-clouds.php:609
+msgid "6 months"
+msgstr "6 kuukautta"
+
+#: inc/related-posts.php:896
+#: inc/tag-clouds.php:610
+msgid "1 year"
+msgstr "1 vuosi"
+
+#: inc/related-posts.php:900
+#: inc/schedule.php:396
+#: inc/schedule.php:430
+#: inc/tag-clouds.php:611
+msgid "No limit"
+msgstr "Ei rajoitusta"
+
+#: inc/related-posts.php:911
+msgid "Limit related posts based on timeframe"
+msgstr "Rajoita liittyviä postauksia aikarajan mukaan"
+
+#: inc/related-posts.php:923
+msgid "Least common tags between posts"
+msgstr "Vähiten yleiset tagit postausten välillä"
+
+#: inc/related-posts.php:930
+msgid "Most common tags between posts"
+msgstr "Yleisimmät tagit postausten välillä"
+
+#: inc/related-posts.php:938
+msgid "Older Entries"
+msgstr "Vanhemmat merkinnät"
+
+#: inc/related-posts.php:942
+msgid "Newer Entries"
+msgstr "Uudemmat merkinnät"
+
+#: inc/related-posts.php:946
+msgid "Alphabetical"
+msgstr "Aakkosjärjestyksessä"
+
+#: inc/related-posts.php:950
+msgid "Inverse Alphabetical"
+msgstr "Käänteisessä aakkosjärjestyksessä"
+
+#: inc/related-posts.php:957
+#: includes-core/TaxopressCoreAdmin.php:881
+#: includes-core/TaxopressCoreAdmin.php:941
+#: includes-core/TaxopressCoreAdmin.php:985
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:114
+msgid "Random"
+msgstr "Satunnainen"
+
+#: inc/related-posts.php:967
+msgid "Related Posts Order"
+msgstr "Liittyvien postauksien järjestys"
+
+#: inc/related-posts.php:979
+msgid "Text to show when there is no related post"
+msgstr "Teksti, joka näytetään, kun ei ole liittyvää postausta"
+
+#: inc/related-posts.php:1007
+msgid "Hide output if no related post is found ?"
+msgstr "Piilota tulos, jos liittyvää postausta ei löydy?"
+
+#: inc/related-posts.php:1029
+msgid "Related Posts div class"
+msgstr "Liittyvien postauksien div-luokka"
+
+#: inc/related-posts.php:1040
+#: inc/tag-clouds.php:926
+msgid "Term link class"
+msgstr "Termilinkin luokka"
+
+#: inc/related-posts.php:1047
+msgid "d.m.Y (e.g., 09.10.2024)"
+msgstr "d.m.Y (esim., 09.10.2024)"
+
+#: inc/related-posts.php:1048
+msgid "F j, Y (e.g., October 9, 2024)"
+msgstr "F j, Y (esim., 9. lokakuuta 2024)"
+
+#: inc/related-posts.php:1049
+msgid "Y-m-d (e.g., 2024-10-09)"
+msgstr "Y-m-d (esim., 2024-10-09)"
+
+#: inc/related-posts.php:1050
+msgid "m/d/Y (e.g., 10/09/2024)"
+msgstr "p/v/Y (esim. 10/09/2024)"
+
+#: inc/related-posts.php:1051
+msgid "d M, Y (e.g., 09 Oct, 2024)"
+msgstr "p M, Y (esim. 09 Lok, 2024)"
+
+#: inc/related-posts.php:1060
+msgid "Post date format"
+msgstr "Postin päivämäärämuoto"
+
+#: inc/related-posts.php:1069
+msgid "Maximum characters of post content to display"
+msgstr "Näytettävien postisisältöjen enimmäismerkkimäärä"
+
+#: inc/related-posts.php:1082
+msgid "Maximum number of categories"
+msgstr "Kategoriat enimmäismäärä"
+
+#: inc/related-posts.php:1086
+msgid "You must set zero (0) to display all post categories."
+msgstr "Sinun on asetettava nolla (0) näyttääksesi kaikki postikategoriat."
+
+#: inc/related-posts.php:1096
+msgid "Maximum number of tags"
+msgstr "Tunnisteet enimmäismäärä"
+
+#: inc/related-posts.php:1100
+msgid "You must set zero (0) to display all post tags."
+msgstr "Sinun on asetettava nolla (0) näyttääksesi kaikki postitunnisteet."
+
+#: inc/related-posts.php:1107
+msgid "Thumbnail (150x150)"
+msgstr "Pienoiskuva (150x150)"
+
+#: inc/related-posts.php:1108
+msgid "Medium (300x300)"
+msgstr "Keskikoko (300x300)"
+
+#: inc/related-posts.php:1109
+msgid "Large (1024x1024)"
+msgstr "Suuri (1024x1024)"
+
+#: inc/related-posts.php:1110
+msgid "1536x1536 (High Res)"
+msgstr "1536x1536 (Korkea Reso)"
+
+#: inc/related-posts.php:1111
+msgid "2048x2048 (Ultra High Res)"
+msgstr "2048x2048 (Erittäin Korkea Reso)"
+
+#: inc/related-posts.php:1122
+msgid "Thumbnail image resolution"
+msgstr "Pienoiskuvan kuvakoko"
+
+#: inc/related-posts.php:1133
+msgid "Default post thumbnail"
+msgstr "Oletusarvoinen postin pienoiskuva"
+
+#: inc/related-posts.php:1144
+msgid "Using default TaxoPress image"
+msgstr "Käytetään oletusarvoista TaxoPress-kuvaa"
+
+#: inc/related-posts.php:1153
+msgid "Select Media"
+msgstr "Valitse media"
+
+#: inc/related-posts.php:1156
+msgid "Use Default Image"
+msgstr "Käytä oletuskuvaa"
+
+#: inc/related-posts.php:1159
+msgid "Remove Image"
+msgstr "Poista kuva"
+
+#: inc/related-posts.php:1166
+msgid ""
+"Select the default %post_thumb_url% to be used when a post doesn't have a "
+"featured image."
+msgstr ""
+"Valitse oletus %post_thumb_url% käytettäväksi, kun postilla ei ole "
+"esikatselukuvaa."
+
+#: inc/related-posts.php:1194
+msgid ""
+"You're using TaxoPress Free.\n"
+"                                            The Pro version has more "
+"features and support."
+msgstr ""
+"Käytät TaxoPress Free -versiota. Pro-versiossa on enemmän ominaisuuksia ja "
+"tukea."
+
+#: inc/related-posts.php:1198
+#: inc/tag-clouds.php:970
+#: includes-core/TaxopressCoreAdmin.php:50
+#: includes-core/TaxopressCoreAdmin.php:136
+#: includes-core/TaxopressCoreAdmin.php:189
+#: includes-core/TaxopressCoreAdmin.php:213
+#: includes-core/TaxopressCoreAdmin.php:237
+#: includes-core/TaxopressCoreAdmin.php:261
+#: includes-core/TaxopressCoreAdmin.php:288
+#: includes-core/TaxopressCoreAdmin.php:306
+#: includes-core/TaxopressCoreAdmin.php:405
+#: includes-core/TaxopressCoreAdmin.php:423
+#: includes-core/TaxopressCoreAdmin.php:441
+#: includes-core/TaxopressCoreAdmin.php:459
+#: includes-core/TaxopressCoreAdmin.php:483
+#: includes-core/TaxopressCoreAdmin.php:507
+#: includes-core/TaxopressCoreAdmin.php:531
+#: includes-core/TaxopressCoreAdmin.php:577
+#: includes-core/TaxopressCoreAdmin.php:615
+#: includes-core/TaxopressCoreAdmin.php:689
+msgid "Upgrade to Pro"
+msgstr "Päivitä Pro:hon"
+
+#: inc/related-posts.php:1235
+msgid "Save Related Posts"
+msgstr "Tallenna liittyvät artikkelit"
+
+#: inc/related-posts.php:1243
+msgid "Add Related Posts"
+msgstr "Lisää liittyvät artikkelit"
+
+#: inc/related-posts.php:1256
+#: inc/tag-clouds.php:1021, fuzzy
+msgid "Shortcode: "
+msgstr "Shortcode: "
+
+#: inc/related-posts.php:1278
+msgid "Related Posts format"
+msgstr "Liittyvien artikkelien muoto"
+
+#: inc/related-posts.php:1283
+msgid "Here are the tokens you can use for related posts format"
+msgstr "Tässä ovat tokenit, joita voit käyttää liittyvien artikkelien muodossa"
+
+#: inc/related-posts.php:1285
+msgid "The URL of the post"
+msgstr "Artikkelin URL-osoite"
+
+#: inc/related-posts.php:1286
+msgid "The title of the post"
+msgstr "Artikkelin otsikko"
+
+#: inc/related-posts.php:1287
+msgid "The date of the post (this shows inside a tooltip)"
+msgstr "Artikkelin päivämäärä (tämä näkyy työkaluvihjeessä)"
+
+#: inc/related-posts.php:1288
+msgid "The number of tags used by both posts"
+msgstr "Molempien artikkeleiden käyttämien tagien määrä"
+
+#: inc/related-posts.php:1289
+msgid "The number of comments on the post"
+msgstr "Artikkeliin tulleiden kommenttien määrä"
+
+#: inc/related-posts.php:1290
+msgid "The ID of the post"
+msgstr "Artikkelin ID"
+
+#: inc/related-posts.php:1291
+msgid "A list of tags used by both the current post and the related post"
+msgstr ""
+"Luettelo tagista, joita käyttävät sekä nykyinen artikkeli että liittyvä "
+"artikkeli"
+
+#: inc/related-posts.php:1292
+msgid "The post excerpt"
+msgstr "Artikkelin ote"
+
+#: inc/related-posts.php:1293
+msgid "The post featured image url"
+msgstr "Artikkelin esikatselukuva URL"
+
+#: inc/related-posts.php:1294
+msgid "The post content"
+msgstr "Artikkelin sisältö"
+
+#: inc/related-posts.php:1295
+msgid "The post category"
+msgstr "Artikkelin kategoria"
+
+#: inc/related-posts.php:1296
+msgid "The font size of the post"
+msgstr "Artikkelin fonttikoko"
+
+#: inc/related-posts.php:1297
+msgid "The color of the post title"
+msgstr "Artikkelin otsikon väri"
+
+#: inc/related-posts.php:1319
+#: inc/tag-clouds.php:1082
+#: inc/taxonomies.php:1963
+msgid "Please complete the following required fields to save your changes:"
+msgstr "Ole hyvä ja täytä seuraavat pakolliset kentät tallentaaksesi muutoksesi:"
+
+#: inc/related-posts.php:1322
+#: inc/tag-clouds.php:1085
+#: inc/taxonomies.php:1966
+msgid "Okay"
+msgstr "Ok"
+
+#: inc/related-posts.php:1331
+#: inc/tag-clouds.php:1094
+#: inc/taxonomies.php:1975
+msgid "Yes"
+msgstr "Kyllä"
+
+#: inc/related-posts.php:1343
+msgid "Security check failed."
+msgstr "Turvatarkistus epäonnistui."
+
+#: inc/related-posts.php:1347
+#: inc/tag-clouds.php:1113
+#: modules/taxopress-ai/taxopress-ai.php:1704
+msgid "Permission denied."
+msgstr "Käyttöoikeus kielletty."
+
+#: inc/related-posts.php:1354
+msgid "Select a post to see a preview."
+msgstr "Valitse julkaisu nähdäksesi esikatselun."
+
+#: inc/related-posts.php:1422
+msgid "No related posts found."
+msgstr "Liittyviä julkaisuja ei löytynyt."
+
+#: inc/schedule-logs-table.php:13, fuzzy
+msgid "autotermsschedulelog"
+msgstr "autotermsschedulelog"
+
+#: inc/schedule-logs-table.php:14, fuzzy
+msgid "autotermsschedulelogs"
+msgstr "autotermsschedulelogs"
+
+#: inc/schedule-logs-table.php:51
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:761, fuzzy
+msgid "Post"
+msgstr "Post"
+
+#: inc/schedule-logs-table.php:52
+#: inc/terms-table.php:858
+msgid "Post type"
+msgstr "post type"
+
+#: inc/schedule-logs-table.php:54
+msgid "Terms added"
+msgstr "Ehdot lisätty"
+
+#: inc/schedule-logs-table.php:55
+msgid "Date"
+msgstr "Päivämäärä"
+
+#: inc/schedule-logs-table.php:68
+msgid "Schedule log is empty."
+msgstr "Aikataululoki on tyhjää."
+
+#: inc/schedule-logs-table.php:130
+msgid "Edit Main Post"
+msgstr "Muokkaa pääjulkaisua"
+
+#: inc/schedule-logs-table.php:143
+msgid "Delete Log"
+msgstr "Poista loki"
+
+#: inc/schedule.php:40
+#: inc/schedule.php:41
+#: inc/schedule.php:201
+msgid "Auto Terms Schedule"
+msgstr "Automaattiset ehdot - aikataulu"
+
+#: inc/schedule.php:83
+msgid "Schedule is disabled. Please enable a schedule frequency to run a test."
+msgstr ""
+"Aikataulu on poistettu käytöstä. Ota aikataulutaajuus käyttöön testin "
+"suorittamiseksi."
+
+#: inc/schedule.php:99
+#, php-format
+msgid ""
+"Scheduled the cron event %s to run now. The original event will not be "
+"affected."
+msgstr ""
+"Aikataulutettiin cron-tapahtuma %s suoritettavaksi nyt. Alkuperäiseen "
+"tapahtumaan ei vaikuta."
+
+#: inc/schedule.php:123
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:869
+msgid "An error occured."
+msgstr "Tapahtui virhe."
+
+#: inc/schedule.php:126
+msgid "Limit per batches is required."
+msgstr "Eräkohtainen raja on pakollinen."
+
+#: inc/schedule.php:128
+msgid "Batches wait time is required."
+msgstr "Erien odotusaika on pakollinen."
+
+#: inc/schedule.php:170
+msgid "Schedule is not enabled for selected Auto Terms."
+msgstr "Aikataulu ei ole käytössä valituille Auto Terms -ehdoille."
+
+#: inc/schedule.php:203
+msgid ""
+"This feature allows you to run the Auto Terms feature on a schedule. This "
+"is helpful if you regularly import content into WordPress. TaxoPress can "
+"run on a schedule and add terms to your imported content."
+msgstr ""
+"Tämä ominaisuus mahdollistaa Auto Terms -ominaisuuden ajamisen aikataulun "
+"mukaan. Tämä on hyödyllistä, jos tuonti WordPressiin on säännöllistä. "
+"TaxoPress voi toimia aikataulun mukaan ja lisätä termejä tuontisisältöön."
+
+#: inc/schedule.php:213
+msgid "Settings"
+msgstr "Asetukset"
+
+#: inc/schedule.php:225
+msgid "Select an option..."
+msgstr "Valitse vaihtoehto..."
+
+#: inc/schedule.php:249
+msgid "Auto Terms setting"
+msgstr "Auto Terms -asetukset"
+
+#: inc/schedule.php:253
+msgid "Select Auto Terms settings to use when running the \"Schedule\" feature."
+msgstr ""
+"Valitse Auto Terms -asetukset, joita käytetään \"Aikataulu\" -ominaisuuden "
+"ajamiseen."
+
+#: inc/schedule.php:259
+msgid "Do not run on a schedule"
+msgstr "Älä aja aikataulun mukaan"
+
+#: inc/schedule.php:260
+msgid "Weekly"
+msgstr "Viikoittain"
+
+#: inc/schedule.php:264
+msgid "Schedule Frequency"
+msgstr "Aikataulun taajuus"
+
+#: inc/schedule.php:290
+msgid "Disable 'Do not run on a schedule' to select schedule frequency."
+msgstr ""
+"Poista käytöstä 'Älä aja aikataulun mukaan' -vaihtoehto valitaksesi "
+"aikataulun taajuuden."
+
+#: inc/schedule.php:338
+msgid "Exclude previously analyzed content"
+msgstr "Poista aiemmin analysoitu sisältö"
+
+#: inc/schedule.php:339
+msgid ""
+"This enables you to skip posts that have already been analyzed by the "
+"Schedule feature."
+msgstr ""
+"Tämä mahdollistaa jo aikaisemmin Aikataulu-ominaisuuden avulla "
+"analysoitujen viestien ohittamisen."
+
+#: inc/schedule.php:347
+msgid "Limit per batches"
+msgstr "Eräkohtainen raja"
+
+#: inc/schedule.php:351
+msgid ""
+"This enables your scheduled Auto Terms to run in batches. If you have a lot "
+"of content, set this to a lower number to avoid timeouts."
+msgstr ""
+"Tämä mahdollistaa aikataulutettujen Auto Terms -ehdojen ajamisen erissä. "
+"Jos sinulla on paljon sisältöä, aseta tämä pienemmäksi, jotta vältät "
+"aikakatkaisuja."
+
+#: inc/schedule.php:361
+msgid "Batches wait time"
+msgstr "Erien odotusaika"
+
+#: inc/schedule.php:362
+msgid ""
+"This is the wait time (in seconds) between processing batches of Auto "
+"Terms. If you have a lot of existing content, set this to a higher number "
+"to avoid timeouts."
+msgstr ""
+"Tämä on odotusaika (sekunteina) Auto Terms -erien käsittelyn välillä. Jos "
+"sinulla on paljon olemassa olevaa sisältöä, aseta tämä suuremmaksi, jotta "
+"vältät aikakatkaisuja."
+
+#: inc/schedule.php:371
+#: inc/schedule.php:406
+msgid "24 hours ago"
+msgstr "24 tuntia sitten"
+
+#: inc/schedule.php:375
+#: inc/schedule.php:410
+msgid "7 days ago"
+msgstr "7 päivää sitten"
+
+#: inc/schedule.php:379
+#: inc/schedule.php:414
+msgid "2 weeks ago"
+msgstr "2 viikkoa sitten"
+
+#: inc/schedule.php:383
+#: inc/schedule.php:418
+msgid "1 month ago"
+msgstr "1 kuukausi sitten"
+
+#: inc/schedule.php:388
+#: inc/schedule.php:422
+msgid "6 months ago"
+msgstr "6 kuukautta sitten"
+
+#: inc/schedule.php:392
+#: inc/schedule.php:426
+msgid "1 year ago"
+msgstr "1 vuosi sitten"
+
+#: inc/schedule.php:443
+msgid "Limit Auto Terms, based on published date"
+msgstr "Rajoita Auto Ehtoja, julkaisu päivämäärän mukaan"
+
+#: inc/schedule.php:447
+msgid ""
+"This setting can limit your scheduled Auto Terms query to only recent "
+"content. We recommend using this feature to avoid timeouts on large sites."
+msgstr ""
+"Tämä asetus voi rajoittaa aikataulutettua Auto Ehtoja -kyselyä vain "
+"tuoreeseen sisältöön. Suosittelemme tämän ominaisuuden käyttöä suurilla "
+"sivustoilla aikakatkaisuja välttääksesi."
+
+#: inc/schedule.php:457
+msgid "Save Settings"
+msgstr "Tallenna asetukset"
+
+#: inc/schedule.php:458
+msgid "Test Run"
+msgstr "Testiajo"
+
+#: inc/schedule.php:467
+msgid "Recent Schedule Runs"
+msgstr "Äskettäiset aikataulutukset"
+
+#: inc/schedule.php:473
+#, php-format
+msgid "You can see full log details on the %1s screen"
+msgstr "Voit nähdä täydelliset lokitiedot %1s näytöllä"
+
+#: inc/schedule.php:473
+msgid "Auto Terms Logs"
+msgstr "Auto Ehtojen lokit"
+
+#: inc/tag-clouds-functions.php:153
+#: inc/tag-clouds-table.php:14
+#: inc/tag-clouds-table.php:15
+#: inc/tag-clouds.php:73
+#: inc/tag-clouds.php:74
+#: inc/tag-clouds.php:129
+msgid "Terms Display"
+msgstr "Ehtojen näyttö"
+
+#: inc/tag-clouds-functions.php:254
+msgid "Terms Display successfully deleted."
+msgstr "Ehtojen näyttö poistettiin onnistuneesti."
+
+#: inc/tag-clouds-table.php:67
+#: inc/tag-clouds.php:435
+msgid "Post Type"
+msgstr "Post Type"
+
+#: inc/tag-clouds-table.php:376
+#: inc/tag-clouds.php:655
+#: includes-core/TaxopressCoreAdmin.php:705, fuzzy
+msgid "Cloud"
+msgstr "Cloud"
+
+#: inc/tag-clouds-table.php:379
+#: inc/tag-clouds.php:658, fuzzy
+msgid "WordPress Default"
+msgstr "WordPress Default"
+
+#: inc/tag-clouds-table.php:380
+#: inc/tag-clouds.php:659
+msgid "Table List"
+msgstr "Taulukkoluettelo"
+
+#: inc/tag-clouds-table.php:381
+#: inc/tag-clouds.php:660
+msgid "Border Cloud"
+msgstr "Reunus Cloud"
+
+#: inc/tag-clouds-table.php:382
+#: inc/tag-clouds.php:661
+msgid "Parent / Child"
+msgstr "Vanhempi / Lapsi"
+
+#: inc/tag-clouds.php:135
+msgid "Add New Terms Display"
+msgstr "Lisää uusi ehtojen näyttö"
+
+#: inc/tag-clouds.php:138
+msgid ""
+"This feature allows you to create a customizable display of all the terms "
+"in one taxonomy."
+msgstr ""
+"Tämä ominaisuus sallii sinun luoda mukautettavan esityksen kaikista "
+"termeistä yhdessä taxonomyssa."
+
+#: inc/tag-clouds.php:161
+msgid "Search Terms Display"
+msgstr "Hakutermejä esitys"
+
+#: inc/tag-clouds.php:242
+msgid "Manage Terms Display"
+msgstr "Hallitse termejä esitys"
+
+#: inc/tag-clouds.php:258
+msgid "Preview Terms Display"
+msgstr "Esikatselu termejä esitys"
+
+#: inc/tag-clouds.php:263
+msgid "Move up"
+msgstr "Siirrä ylös"
+
+#: inc/tag-clouds.php:266
+msgid "Move down"
+msgstr "Siirrä alas"
+
+#: inc/tag-clouds.php:303
+msgid "Edit Terms Display"
+msgstr "Muokkaa termejä esitystä"
+
+#: inc/tag-clouds.php:310
+msgid "Add new Terms Display"
+msgstr "Lisää uusi termejä esitys"
+
+#: inc/tag-clouds.php:321
+msgid "To create more Terms Display, please upgrade to TaxoPress Pro."
+msgstr "Luodaksesi lisää termejä esityksiä, päivitä TaxoPress Pro:hon."
+
+#: inc/tag-clouds.php:324
+msgid ""
+"With TaxoPress Pro, you can create unlimited Terms Display. You can create "
+"Terms Display for any taxonomy and then display those Terms Display "
+"anywhere on your site."
+msgstr ""
+"TaxoPress Pro:n kanssa voit luoda rajattomasti termejä esityksiä. Voit "
+"luoda termejä esityksiä mille tahansa taxonomylle ja näyttää ne sitten "
+"missä tahansa sivustollasi."
+
+#: inc/tag-clouds.php:338
+msgid "Choose Terms"
+msgstr "Valitse termit"
+
+#: inc/tag-clouds.php:350
+msgid "Exceptions"
+msgstr "Poikkeukset"
+
+#: inc/tag-clouds.php:358
+#: includes-core/TaxopressCoreAdmin.php:711
+msgid "Display Format"
+msgstr "Esitysmuoto"
+
+#: inc/tag-clouds.php:412
+msgid "Hide title in output?"
+msgstr "Piilota otsikko tulosteessa?"
+
+#: inc/tag-clouds.php:418
+msgid "All post types"
+msgstr "Kaikki julkaisutyypit"
+
+#: inc/tag-clouds.php:469
+msgid "All Parent Terms"
+msgstr "Kaikki vanhempatermit"
+
+#: inc/tag-clouds.php:519
+msgid "Parent Term"
+msgstr "Vanhempatermi"
+
+#: inc/tag-clouds.php:525
+msgid "Display only Parent Terms"
+msgstr "Näytä vain vanhempatermit"
+
+#: inc/tag-clouds.php:526
+msgid "Display only Sub-Terms"
+msgstr "Näytä vain alatermit"
+
+#: inc/tag-clouds.php:527
+msgid "Display Parents and Sub-Terms"
+msgstr "Näytä vanhempatermit ja alatermit"
+
+#: inc/tag-clouds.php:537
+msgid "Display Mode"
+msgstr "Näyttötila"
+
+#: inc/tag-clouds.php:554
+msgid "Term selection mode"
+msgstr "Termien valintatila"
+
+#: inc/tag-clouds.php:562
+msgid "Automatic"
+msgstr "Automaattinen"
+
+#: inc/tag-clouds.php:565
+msgid "Display terms based on settings in the \"General\" tab."
+msgstr "Näytä termit asetusten mukaan \"Yleiset\" -välilehdessä."
+
+#: inc/tag-clouds.php:571
+msgid "Custom"
+msgstr "Mukautettu"
+
+#: inc/tag-clouds.php:574
+msgid ""
+"Display only the specific terms entered in the \"Custom terms to display\" "
+"field below."
+msgstr ""
+"Näytä vain tietyt termit, jotka on syötetty alla olevaan \"Näytettävät "
+"mukautetut termit\" -kenttään."
+
+#: inc/tag-clouds.php:580
+msgid "Combined"
+msgstr "Yhdistetty"
+
+#: inc/tag-clouds.php:583
+msgid "Display automatic terms plus any additional custom terms specified below."
+msgstr ""
+"Näytä automaattiset termit sekä mahdolliset lisämukautetut termit, jotka on "
+"määritelty alla."
+
+#: inc/tag-clouds.php:598
+msgid "Custom terms to display"
+msgstr "Näytettävät mukautetut termit"
+
+#: inc/tag-clouds.php:599
+msgid "Enter terms (comma-separated) to display. Used in Custom and Combined modes."
+msgstr ""
+"Syötä termit (pilkuilla erotettuna), jotka haluat näyttää. Käytetään "
+"Mukautetuissa ja Yhdistetyissä tiloissa."
+
+#: inc/tag-clouds.php:620
+msgid "Limit terms based on timeframe"
+msgstr "Rajoita termejä aikarajojen mukaan"
+
+#: inc/tag-clouds.php:629
+#: includes-core/TaxopressCoreAdmin.php:837
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:146
+msgid "Ascending"
+msgstr "Nouseva"
+
+#: inc/tag-clouds.php:630
+#: includes-core/TaxopressCoreAdmin.php:838
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:147
+msgid "Descending"
+msgstr "Laskeva"
+
+#: inc/tag-clouds.php:639
+#: includes-core/TaxopressCoreAdmin.php:843
+msgid "Ordering for choosing terms for display"
+msgstr "Termien valinnan järjestys näytettäväksi"
+
+#: inc/tag-clouds.php:688
+msgid "Text to display before terms list"
+msgstr "Teksti, joka näytetään ennen termiluetteloa"
+
+#: inc/tag-clouds.php:692
+msgid ""
+"Enter the text that should be display before terms list. This field accepts "
+"basic HTML."
+msgstr ""
+"Syötä teksti, joka pitäisi näyttää ennen termiluetteloa. Tämä kenttä "
+"hyväksyy perus HTML:n."
+
+#: inc/tag-clouds.php:704
+msgid "Text to display after terms list"
+msgstr "Teksti, joka näytetään termiluettelon jälkeen"
+
+#: inc/tag-clouds.php:708
+msgid ""
+"Enter the text that should be display after terms list. This field accepts "
+"basic HTML."
+msgstr ""
+"Syötä teksti, joka pitäisi näyttää termiluettelon jälkeen. Tämä kenttä "
+"hyväksyy perus HTML:n."
+
+#: inc/tag-clouds.php:729
+msgid "Exclude terms from terms display"
+msgstr "Poista termit termien näytöstä"
+
+#: inc/tag-clouds.php:730
+msgid "Enter terms (comma-separated) to exclude from the terms display."
+msgstr "Syötä termit (pilkuilla erotettuna), jotka haluat poistaa termien näytöstä."
+
+#: inc/tag-clouds.php:758
+msgid "Exclude hidden terms from Terms Display?"
+msgstr "Poistetaanko piilotetut termit Termien näyttämisestä?"
+
+#: inc/tag-clouds.php:794
+msgid "Hide display output if no terms?"
+msgstr "Piilotetaanko näyttö, jos termejä ei ole?"
+
+#: inc/tag-clouds.php:803
+msgid "Maximum terms to display"
+msgstr "Maksimimäärä näytettäviä termejä"
+
+#: inc/tag-clouds.php:884
+msgid "This is the color of the least popular term"
+msgstr "Tämä on vähiten suositun termin väri"
+
+#: inc/tag-clouds.php:895
+msgid "This is the color of the most popular term"
+msgstr "Tämä on suosituimman termin väri"
+
+#: inc/tag-clouds.php:915
+msgid "Term display div class"
+msgstr "Termien näyttö div-luokka"
+
+#: inc/tag-clouds.php:940
+#, php-format
+msgid ""
+"This option allows you to change the format of your terms. You can use any "
+"of the tokens in the \"Terms Display format\" sidebar\". Find more details "
+"%1sin the documentation%2s."
+msgstr ""
+"Tämä vaihtoehto antaa sinun muuttaa termiesi muotoa. Voit käyttää mitä "
+"tahansa tokeneita \"Termien näyttömuoto\" -sivupalkissa\". Löydät lisää "
+"tietoja %1sdokumentaatiosta%2."
+
+#: inc/tag-clouds.php:966
+msgid ""
+"You're using TaxoPress Free.\n"
+"                                        The Pro version has more features "
+"and support."
+msgstr ""
+"Käytät TaxoPress Free -versiota.\n"
+"                                        Pro-versiossa on enemmän "
+"ominaisuuksia ja tukea."
+
+#: inc/tag-clouds.php:975
+msgid "Font size minimum must not be greater than Font size maximum value."
+msgstr "Fonttikoon minimimäärän ei tule olla suurempi kuin fonttikoon maksimiarvo."
+
+#: inc/tag-clouds.php:1007
+msgid "Save Terms Display"
+msgstr "Tallenna termien näyttö"
+
+#: inc/tag-clouds.php:1011
+msgid "Add Terms Display"
+msgstr "Lisää termien näyttö"
+
+#: inc/tag-clouds.php:1039
+msgid "Terms Display format"
+msgstr "Termien näyttömuoto"
+
+#: inc/tag-clouds.php:1044
+msgid "Here are the tokens you can use for Term link format"
+msgstr "Tässä ovat tokenit, joita voit käyttää termilinkkien muodossa"
+
+#: inc/tag-clouds.php:1046
+msgid "The URL of the term"
+msgstr "Termin URL-osoite"
+
+#: inc/tag-clouds.php:1047
+msgid "The ID of the term"
+msgstr "Termin ID"
+
+#: inc/tag-clouds.php:1048
+msgid "The weighted size of the term in the display"
+msgstr "Termin painotettu koko näytössä"
+
+#: inc/tag-clouds.php:1049
+msgid "The number of times the term is used"
+msgstr "Kuinka monta kertaa termiä käytetään"
+
+#: inc/tag-clouds.php:1050
+msgid "This provides rel tag markup"
+msgstr "Tämä tuottaa rel-tagin merkinnän"
+
+#: inc/tag-clouds.php:1050
+msgid "it creates"
+msgstr "se luo"
+
+#: inc/tag-clouds.php:1051
+msgid "The font size for the term"
+msgstr "Termin fonttikoko"
+
+#: inc/tag-clouds.php:1052
+msgid "The font color for the term"
+msgstr "Termiä varten käytetty fontin väri"
+
+#: inc/tag-clouds.php:1053
+msgid "The name of the term"
+msgstr "Termin nimi"
+
+#: inc/tag-clouds.php:1054
+msgid "The name of the term with any HTML stripped out"
+msgstr "Termin nimi ilman HTML-tageja"
+
+#: inc/tag-clouds.php:1055
+msgid "The description of the term"
+msgstr "Termin kuvaus"
+
+#: inc/tag-clouds.php:1109
+msgid "Invalid nonce"
+msgstr "Virheellinen nonce"
+
+#: inc/tag-clouds.php:1117
+msgid "Missing display ID."
+msgstr "Näyttö-ID puuttuu."
+
+#: inc/tag-clouds.php:1125
+msgid "Invalid terms display configuration."
+msgstr "Virheellinen termien näyttökonfiguraatio."
+
+#: inc/tag-clouds.php:1175
+msgid "There are no terms in this taxonomy."
+msgstr "Tässä taksonomiassa ei ole termejä."
+
+#: inc/taxonomies-functions.php:124
+#: inc/taxonomies-functions.php:1969
+msgid "Please provide a taxonomy to delete"
+msgstr "Ole hyvä ja anna poistettavaksi taksonomia"
+
+#: inc/taxonomies-functions.php:274
+msgid "Please provide a taxonomy name"
+msgstr "Ole hyvä ja anna taksonomian nimi"
+
+#: inc/taxonomies-functions.php:1115
+msgid "Object"
+msgstr "Objekti"
+
+#: inc/taxonomies-functions.php:1149
+#: inc/taxonomies-functions.php:1560
+#, php-format
+msgid "%s has been successfully added"
+msgstr "%s on lisätty onnistuneesti"
+
+#: inc/taxonomies-functions.php:1164
+#: inc/taxonomies-functions.php:1562
+#, php-format
+msgid "%s has failed to be added"
+msgstr "%s ei onnistunut lisäämään"
+
+#: inc/taxonomies-functions.php:1179
+#: inc/taxonomies-functions.php:1566
+#, php-format
+msgid "%s has been successfully updated"
+msgstr "%s on päivitetty onnistuneesti"
+
+#: inc/taxonomies-functions.php:1193
+#: inc/taxonomies-functions.php:1568
+#, php-format
+msgid "%s has failed to be updated"
+msgstr "%s ei onnistunut päivittämään"
+
+#: inc/taxonomies-functions.php:1208
+#: inc/taxonomies-functions.php:1572
+#, php-format
+msgid "%s has been successfully deleted"
+msgstr "%s on poistettu onnistuneesti"
+
+#: inc/taxonomies-functions.php:1222
+#: inc/taxonomies-functions.php:1574
+#, php-format
+msgid "%s has failed to be deleted"
+msgstr "%s ei onnistunut poistamaan"
+
+#: inc/taxonomies-functions.php:1234
+msgid "Nonce failed verification"
+msgstr "Nonce ei läpäissyt vahvistusta"
+
+#: inc/taxonomies-functions.php:1248
+#, php-format
+msgid "Please choose a different taxonomy name. %s is already registered."
+msgstr "Ole hyvä ja valitse toinen taksonomian nimi. %s on jo rekisteröity."
+
+#: inc/taxonomies-functions.php:1261
+msgid "Please provide a post type to attach to."
+msgstr "Ole hyvä ja anna post type, johon liittää."
+
+#: inc/taxonomies-functions.php:1284
+#, php-format
+msgid ""
+"Please choose a different post type name. %s matches an existing page slug, "
+"which can cause conflicts."
+msgstr ""
+"Valitse toinen post type -nimi. %s vastaa olemassa olevaa sivun slugia, "
+"mikä voi aiheuttaa ristiriitoja."
+
+#: inc/taxonomies-functions.php:1300
+msgid "Please do not use quotes in post type/taxonomy names or rewrite slugs"
+msgstr ""
+"Älä käytä lainausmerkkejä post type/taxonomy-nimissä tai kirjoita slugeja "
+"uudelleen"
+
+#: inc/taxonomies-functions.php:1578
+#, php-format
+msgid "%s has been successfully imported"
+msgstr "%s on tuotu onnistuneesti"
+
+#: inc/taxonomies-functions.php:1580
+#, php-format
+msgid "%s has failed to be imported"
+msgstr "%s tuonti epäonnistui"
+
+#: inc/taxonomies-functions.php:1666
+#: inc/taxonomies-functions.php:1684
+#: inc/taxonomies-functions.php:1707
+#: inc/taxonomies-functions.php:1726
+#: inc/taxonomies.php:1258
+#, php-format
+msgid "Add new %s"
+msgstr "Lisää uusi %s"
+
+#: inc/taxonomies-functions.php:1667
+#: inc/taxonomies-functions.php:1682
+#: inc/taxonomies-functions.php:1708
+#: inc/taxonomies-functions.php:1724
+#: inc/taxonomies.php:1192
+#, php-format
+msgid "Edit %s"
+msgstr "Muokkaa %s"
+
+#: inc/taxonomies-functions.php:1668
+#: inc/taxonomies-functions.php:1709
+#, php-format
+msgid "New %s"
+msgstr "Uusi %s"
+
+#: inc/taxonomies-functions.php:1669
+#: inc/taxonomies-functions.php:1670
+#: inc/taxonomies-functions.php:1710
+#: inc/taxonomies-functions.php:1713
+#: inc/taxonomies.php:1213
+#, php-format
+msgid "View %s"
+msgstr "Näytä %s"
+
+#: inc/taxonomies-functions.php:1671
+#: inc/taxonomies-functions.php:1679
+#: inc/taxonomies-functions.php:1714
+#: inc/taxonomies-functions.php:1732
+#: inc/taxonomies-functions.php:2429
+#: inc/taxonomies.php:1171
+#: inc/terms-table.php:852
+#, php-format
+msgid "All %s"
+msgstr "Kaikki %s"
+
+#: inc/taxonomies-functions.php:1672
+#: inc/taxonomies-functions.php:1677
+#: inc/taxonomies-functions.php:1715
+#: inc/taxonomies-functions.php:1730
+#: inc/taxonomies.php:1342
+#, php-format
+msgid "Search %s"
+msgstr "Hae %s"
+
+#: inc/taxonomies-functions.php:1673
+#: inc/taxonomies-functions.php:1716
+#, php-format
+msgid "No %s found."
+msgstr "Ei %s löytynyt."
+
+#: inc/taxonomies-functions.php:1674
+#: inc/taxonomies-functions.php:1717
+#, php-format
+msgid "No %s found in trash."
+msgstr "Ei %s löytynyt roskakorista."
+
+#: inc/taxonomies-functions.php:1678
+#: inc/taxonomies-functions.php:1731
+#: inc/taxonomies.php:1363
+#, php-format
+msgid "Popular %s"
+msgstr "Suositut %s"
+
+#: inc/taxonomies-functions.php:1680
+#: inc/taxonomies-functions.php:1722
+#: inc/taxonomies.php:1300
+#, php-format
+msgid "Parent %s"
+msgstr "Vanhempi %s"
+
+#: inc/taxonomies-functions.php:1681
+#: inc/taxonomies-functions.php:1723
+#: inc/taxonomies.php:1321
+#, php-format
+msgid "Parent %s:"
+msgstr "Vanhempi %s:"
+
+#: inc/taxonomies-functions.php:1683
+#: inc/taxonomies-functions.php:1725
+#, php-format
+msgid "Update %s"
+msgstr "Päivitä %s"
+
+#: inc/taxonomies-functions.php:1685
+#: inc/taxonomies-functions.php:1727
+#: inc/taxonomies.php:1279
+#, php-format
+msgid "New %s name"
+msgstr "Uuden %s nimi"
+
+#: inc/taxonomies-functions.php:1686
+#: inc/taxonomies-functions.php:1733
+#: inc/taxonomies.php:1389
+#. translators: Used for autofill
+#, php-format
+msgid "Separate %s with commas"
+msgstr "Erota %s pilkuilla"
+
+#: inc/taxonomies-functions.php:1687
+#: inc/taxonomies-functions.php:1734
+#: inc/taxonomies.php:1414
+#, php-format
+msgid "Add or remove %s"
+msgstr "Lisää tai poista %s"
+
+#: inc/taxonomies-functions.php:1688
+#: inc/taxonomies-functions.php:1735
+#: inc/taxonomies.php:1440
+#. translators: Used for autofill
+#, php-format
+msgid "Choose from the most used %s"
+msgstr "Valitse käytetyimmistä %s"
+
+#: inc/taxonomies-functions.php:1814
+msgid "Kindly select an action in bulk action dropdown!"
+msgstr "Valitse ystävällisesti toiminto joukkotoimintavalikosta!"
+
+#: inc/taxonomies-functions.php:1826
+msgid "Kindly select atleast one taxonomy to proceed"
+msgstr "Valitse ystävällisesti vähintään yksi taxonomy jatkaaksesi"
+
+#: inc/taxonomies-functions.php:1837
+msgid "Taxonomy has been successfully deactivated"
+msgstr "Taxonomy on poistettu käytöstä onnistuneesti"
+
+#: inc/taxonomies-functions.php:1846
+msgid "Taxonomy has been successfully activated"
+msgstr "Taxonomy on aktivoitu onnistuneesti"
+
+#: inc/taxonomies-functions.php:1855
+msgid "Taxonomy has been successfully deleted"
+msgstr "Taxonomy on poistettu onnistuneesti"
+
+#: inc/taxonomies.php:77
+msgid ""
+"Are you sure you want to delete this? Deleting will NOT remove created "
+"content."
+msgstr ""
+"Oletko varma, että haluat poistaa tämän? Poistaminen EI poista luotua "
+"sisältöä."
+
+#: inc/taxonomies.php:81
+msgid "Please select at least one post type."
+msgstr "Valitse vähintään yksi post type."
+
+#: inc/taxonomies.php:83
+msgid "Taxonomy slug cannot be numbers only."
+msgstr "Taxonomy slug ei voi olla pelkkiä numeroita."
+
+#: inc/taxonomies.php:114
+#: inc/taxonomies.php:115
+#: inc/taxonomies.php:170
+msgid "Taxonomies"
+msgstr "Taxonomies"
+
+#: inc/taxonomies.php:172
+msgid "Add New"
+msgstr "Lisää uusi"
+
+#: inc/taxonomies.php:174
+msgid ""
+"This feature allows you to create new taxonomies and edit all the settings "
+"for each taxonomy."
+msgstr ""
+"Tämä ominaisuus antaa sinun luoda uusia taxonomyeja ja muokata kaikkia "
+"asetuksia kullekin taxonomylle."
+
+#: inc/taxonomies.php:197
+msgid "Search Taxonomies"
+msgstr "Hae taxonomyeja"
+
+#: inc/taxonomies.php:215
+#: inc/terms-table.php:876
+msgid "All Taxonomies"
+msgstr "Kaikki taxonomyt"
+
+#: inc/taxonomies.php:216
+#: inc/terms-table.php:877
+msgid "Public Taxonomies"
+msgstr "Julkiset taxonomyt"
+
+#: inc/taxonomies.php:217
+#: inc/terms-table.php:878
+msgid "Private Taxonomies"
+msgstr "Yksityiset taxonomyt"
+
+#: inc/taxonomies.php:237
+msgid "All Post Types"
+msgstr "Kaikki post types"
+
+#: inc/taxonomies.php:297
+msgid "Invalid nonce. Request is not authorized."
+msgstr "Virheellinen nonce. Pyyntöä ei ole valtuutettu."
+
+#: inc/taxonomies.php:427
+msgid "Manage Taxonomy"
+msgstr "Hallinnoi taxonomyä"
+
+#: inc/taxonomies.php:449
+msgid "Edit Taxonomy"
+msgstr "Muokkaa taxonomyä"
+
+#: inc/taxonomies.php:451
+msgid "Add new Taxonomy"
+msgstr "Lisää uusi taxonomy"
+
+#: inc/taxonomies.php:474, fuzzy
+msgid "Permalinks"
+msgstr "Permalinks"
+
+#: inc/taxonomies.php:479, fuzzy
+msgid "Admin Area"
+msgstr "Admin Area"
+
+#: inc/taxonomies.php:483, fuzzy
+msgid "Other Labels"
+msgstr "Other Labels"
+
+#: inc/taxonomies.php:487, fuzzy
+msgid "REST API"
+msgstr "REST API"
+
+#: inc/taxonomies.php:495, fuzzy
+msgid "Order"
+msgstr "Order"
+
+#: inc/taxonomies.php:500
+#: inc/terms-table.php:740
+#: inc/terms-table.php:1404, fuzzy
+msgid "Slug"
+msgstr "Slug"
+
+#: inc/taxonomies.php:509, fuzzy
+msgid "Deactivate or Delete"
+msgstr "Deactivate or Delete"
+
+#: inc/taxonomies.php:527
+#: inc/taxonomies.php:805, fuzzy
+msgid "Taxonomy Slug"
+msgstr "Taxonomy Slug"
+
+#: inc/taxonomies.php:530
+#: inc/taxonomies.php:808, fuzzy
+msgid "Slug has changed"
+msgstr "Slug has changed"
+
+#: inc/taxonomies.php:535
+#: inc/taxonomies.php:813, fuzzy
+msgid "Slug already exists"
+msgstr "Slug already exists"
+
+#: inc/taxonomies.php:539
+#: inc/taxonomies.php:818, fuzzy
+msgid "Special character not allowed in slug."
+msgstr "Special character not allowed in slug."
+
+#: inc/taxonomies.php:550
+msgid ""
+"The “slug” is the URL-friendly version of the name. It is usually all "
+"lowercase and contains only letters, numbers, and underscores."
+msgstr ""
+"The “slug” is the URL-friendly version of the name. It is usually all "
+"lowercase and contains only letters, numbers, and underscores."
+
+#: inc/taxonomies.php:562
+#: inc/taxonomies.php:838
+msgid ""
+"DO NOT EDIT the taxonomy slug unless also planning to migrate terms. "
+"Changing the slug registers a new taxonomy entry."
+msgstr ""
+"DO NOT EDIT the taxonomy slug unless also planning to migrate terms. "
+"Changing the slug registers a new taxonomy entry."
+
+#: inc/taxonomies.php:575
+#: inc/taxonomies.php:851, fuzzy
+msgid "Migrate terms to newly renamed taxonomy?"
+msgstr "Migrate terms to newly renamed taxonomy?"
+
+#: inc/taxonomies.php:594
+#: inc/taxonomies.php:1144, fuzzy
+msgid "(e.g. Jobs)"
+msgstr "(e.g. Jobs)"
+
+#: inc/taxonomies.php:595, fuzzy
+msgid "Plural Label"
+msgstr "Plural Label"
+
+#: inc/taxonomies.php:606, fuzzy
+msgid "(e.g. Job)"
+msgstr "(e.g. Job)"
+
+#: inc/taxonomies.php:607, fuzzy
+msgid "Singular Label"
+msgstr "Singular Label"
+
+#: inc/taxonomies.php:634, fuzzy
+msgid "Parent-Child Relationships"
+msgstr "Parent-Child Relationships"
+
+#: inc/taxonomies.php:635, fuzzy
+msgid "Can terms in this taxonomy be organized into hierarchical relationships?"
+msgstr "Can terms in this taxonomy be organized into hierarchical relationships?"
+
+#: inc/taxonomies.php:654
+#: inc/terms-table.php:733
+#: inc/terms-table.php:741
+msgid "Description"
+msgstr "Kuvaus"
+
+#: inc/taxonomies.php:655
+msgid "Describe what your taxonomy is used for."
+msgstr "Kuvaile, mihin taxonomysiä käytetään."
+
+#: inc/taxonomies.php:666
+msgid "Default Terms"
+msgstr "Oletustermit"
+
+#: inc/taxonomies.php:667
+msgid ""
+"Set the default terms for this taxonomy. These will be automatically added "
+"to all new posts. Enter the term names or slugs. Separate multiple terms "
+"with by comma."
+msgstr ""
+"Aseta oletustermit tälle taxonomylle. Nämä lisätään automaattisesti "
+"kaikkiin uusiin posteihin. Anna termien nimet tai slugit. Erottele useat "
+"termit pilkulla."
+
+#: inc/taxonomies.php:782
+msgid "Archive page result"
+msgstr "Arkistosivun tulos"
+
+#: inc/taxonomies.php:783
+msgid ""
+"Normally, WordPress will only show one post type on taxonomy archive pages. "
+"Enable this feature to show content from all selected posts types."
+msgstr ""
+"Normaalisti WordPress näyttää vain yhden post tyypin "
+"taxonomy-arkistosivuilla. Ota tämä ominaisuus käyttöön näyttääksesi "
+"sisältöä kaikista valituista post tyypeistä."
+
+#: inc/taxonomies.php:892
+msgid "Rewrite"
+msgstr "Uudelleenkirjoita"
+
+#: inc/taxonomies.php:893
+msgid ""
+"WordPress can use a custom permalink for this taxonomy. It does not have to "
+"match the slug."
+msgstr ""
+"WordPress voi käyttää mukautettua permalinkkiä tälle taxonomylle. Sen ei "
+"tarvitse vastata slugia."
+
+#: inc/taxonomies.php:905
+msgid "(default: taxonomy name)"
+msgstr "(oletus: taxonomyn nimi)"
+
+#: inc/taxonomies.php:906
+msgid "Custom Rewrite Slug"
+msgstr "Mukautettu uudelleenkirjoitus slug"
+
+#: inc/taxonomies.php:907
+msgid "Custom taxonomy rewrite slug."
+msgstr "Mukautettu taxonomyn uudelleenkirjoitus slug."
+
+#: inc/taxonomies.php:932
+msgid "Rewrite With Front"
+msgstr "Uudelleenkirjoita etuliitteellä"
+
+#: inc/taxonomies.php:933
+msgid "Should the permastruct be prepended with the front base."
+msgstr "Pitääkö permastructin olla etuliitteen perusosoite?"
+
+#: inc/taxonomies.php:959
+msgid "Rewrite Hierarchical"
+msgstr "Uudelleenkirjoita hierarkkinen"
+
+#: inc/taxonomies.php:960
+msgid "Should the permastruct allow hierarchical urls."
+msgstr "Pitääkö permastructin sallia hierarkkiset URL-osoitteet?"
+
+#: inc/taxonomies.php:996
+msgid "Show user interface"
+msgstr "Näytä käyttöliittymä"
+
+#: inc/taxonomies.php:997
+msgid ""
+"Should there be a visible interface in the WordPress admin area to manage "
+"these terms?"
+msgstr ""
+"Pitäisikö WordPressin hallinta-alueella olla näkyvä käyttöliittymä näiden "
+"termien hallitsemiseksi?"
+
+#: inc/taxonomies.php:1020
+msgid "Show in admin menus"
+msgstr "Näytä hallintavalikoissa"
+
+#: inc/taxonomies.php:1021
+msgid "Should there be links to this taxonomy in the WordPress admin menus?"
+msgstr "Pitäisikö WordPressin hallintavalikoissa olla linkkejä tähän taxonomyyn?"
+
+#: inc/taxonomies.php:1044
+msgid "Show in frontend menus"
+msgstr "Näytä etusivun valikoissa"
+
+#: inc/taxonomies.php:1045
+msgid ""
+"Should this taxonomy be available for the frontend “Menus” and “Navigation” "
+"options?"
+msgstr ""
+"Should this taxonomy be available for the frontend “Menus” and “Navigation” "
+"options?"
+
+#: inc/taxonomies.php:1069, fuzzy
+msgid "Show admin column"
+msgstr "Show admin column"
+
+#: inc/taxonomies.php:1070
+msgid ""
+"Should a column for this taxonomy appear on screens such as “Posts” and "
+"“Pages”?"
+msgstr ""
+"Should a column for this taxonomy appear on screens such as “Posts” and "
+"“Pages”?"
+
+#: inc/taxonomies.php:1093, fuzzy
+msgid "Show in \"Quick Edit\" and \"Bulk Edit\""
+msgstr "Show in \"Quick Edit\" and \"Bulk Edit\""
+
+#: inc/taxonomies.php:1097
+msgid ""
+"Should this taxonomy be available in editing tools on screens such as "
+"“Posts” and “Pages”?"
+msgstr ""
+"Should this taxonomy be available in editing tools on screens such as "
+"“Posts” and “Pages”?"
+
+#: inc/taxonomies.php:1121, fuzzy
+msgid "Show in Filter"
+msgstr "Show in Filter"
+
+#: inc/taxonomies.php:1125
+msgid ""
+"Should this taxonomy be available in filters on screens such as “Posts” and "
+"“Pages”?"
+msgstr ""
+"Should this taxonomy be available in filters on screens such as “Posts” and "
+"“Pages”?"
+
+#: inc/taxonomies.php:1145, fuzzy
+msgid "Menu Name"
+msgstr "Menu Name"
+
+#: inc/taxonomies.php:1146, fuzzy
+msgid "Custom admin menu name for your taxonomy."
+msgstr "Custom admin menu name for your taxonomy."
+
+#: inc/taxonomies.php:1162, fuzzy
+msgid "(e.g. All Jobs)"
+msgstr "(e.g. All Jobs)"
+
+#: inc/taxonomies.php:1163, fuzzy
+msgid "All Items"
+msgstr "All Items"
+
+#: inc/taxonomies.php:1164
+msgid ""
+"Used as tab text when showing all terms for hierarchical taxonomy while "
+"editing post."
+msgstr ""
+"Used as tab text when showing all terms for hierarchical taxonomy while "
+"editing post."
+
+#: inc/taxonomies.php:1183, fuzzy
+msgid "(e.g. Edit Job)"
+msgstr "(e.g. Edit Job)"
+
+#: inc/taxonomies.php:1184, fuzzy
+msgid "Edit Item"
+msgstr "Edit Item"
+
+#: inc/taxonomies.php:1185, fuzzy
+msgid "Used at the top of the term editor screen for an existing taxonomy term."
+msgstr "Used at the top of the term editor screen for an existing taxonomy term."
+
+#: inc/taxonomies.php:1204, fuzzy
+msgid "(e.g. View Job)"
+msgstr "(e.g. View Job)"
+
+#: inc/taxonomies.php:1205, fuzzy
+msgid "View Item"
+msgstr "View Item"
+
+#: inc/taxonomies.php:1206
+msgid ""
+"Used in the admin bar when viewing editor screen for an existing taxonomy "
+"term."
+msgstr ""
+"Used in the admin bar when viewing editor screen for an existing taxonomy "
+"term."
+
+#: inc/taxonomies.php:1225, fuzzy
+msgid "(e.g. Update Job Name)"
+msgstr "(e.g. Update Job Name)"
+
+#: inc/taxonomies.php:1226, fuzzy
+msgid "Update Item Name"
+msgstr "Update Item Name"
+
+#: inc/taxonomies.php:1227
+#: inc/taxonomies.php:1272
+#: inc/taxonomies.php:1293
+#: inc/taxonomies.php:1314
+#: inc/taxonomies.php:1335
+#: inc/taxonomies.php:1356
+#: inc/taxonomies.php:1383
+#: inc/taxonomies.php:1407
+#: inc/taxonomies.php:1434
+msgid "Custom taxonomy label. Used in the admin menu for displaying taxonomies."
+msgstr ""
+"Mukautettu taxonomy-otsikko. Käytetään admin-valikossa taxonomien "
+"näyttämiseen."
+
+#: inc/taxonomies.php:1234
+#, php-format
+msgid "Update %s name"
+msgstr "Päivitä %s nimi"
+
+#: inc/taxonomies.php:1249
+msgid "(e.g. Add New Job)"
+msgstr "(esim. Lisää uusi työ)"
+
+#: inc/taxonomies.php:1250
+msgid "Add New Item"
+msgstr "Lisää uusi kohde"
+
+#: inc/taxonomies.php:1251
+msgid ""
+"Used at the top of the term editor screen and button text for a new "
+"taxonomy term."
+msgstr ""
+"Käytetään termieditorin näytön yläosassa ja painikkeen tekstinä uudelle "
+"taxonomy-termille."
+
+#: inc/taxonomies.php:1270
+msgid "(e.g. New Job Name)"
+msgstr "(esim. Uuden työn nimi)"
+
+#: inc/taxonomies.php:1271
+msgid "New Item Name"
+msgstr "Uuden kohteen nimi"
+
+#: inc/taxonomies.php:1291
+msgid "(e.g. Parent Job)"
+msgstr "(esim. Vanhempi työ)"
+
+#: inc/taxonomies.php:1292
+msgid "Parent Item"
+msgstr "Vanhempi kohde"
+
+#: inc/taxonomies.php:1312
+msgid "(e.g. Parent Job:)"
+msgstr "(esim. Vanhempi työ:)"
+
+#: inc/taxonomies.php:1313
+msgid "Parent Item Colon"
+msgstr "Vanhemman kohteen kaksoispiste"
+
+#: inc/taxonomies.php:1333
+msgid "(e.g. Search Jobs)"
+msgstr "(esim. Hae töitä)"
+
+#: inc/taxonomies.php:1334
+msgid "Search Items"
+msgstr "Hae kohteita"
+
+#: inc/taxonomies.php:1354
+msgid "(e.g. Popular Jobs)"
+msgstr "(esim. Suositut työt)"
+
+#: inc/taxonomies.php:1355
+msgid "Popular Items"
+msgstr "Suositut kohteet"
+
+#: inc/taxonomies.php:1375
+msgid "(e.g. Separate Jobs with commas)"
+msgstr "(esim. Erota työt pilkuilla)"
+
+#: inc/taxonomies.php:1379
+msgid "Separate Items with Commas"
+msgstr "Erota kohteet pilkuilla"
+
+#: inc/taxonomies.php:1402
+msgid "(e.g. Add or remove Jobs)"
+msgstr "(esim. Lisää tai poista töitä)"
+
+#: inc/taxonomies.php:1406
+msgid "Add or Remove Items"
+msgstr "Lisää tai poista kohteita"
+
+#: inc/taxonomies.php:1429
+msgid "(e.g. Choose from the most used Jobs)"
+msgstr "(esim. Valitse eniten käytetyt työt)"
+
+#: inc/taxonomies.php:1433
+msgid "Choose From Most Used"
+msgstr "Valitse käytetyimmistä"
+
+#: inc/taxonomies.php:1453
+msgid "(e.g. No jobs)"
+msgstr "(esim. Ei työpaikkoja)"
+
+#: inc/taxonomies.php:1454
+msgid "No terms"
+msgstr "Ei termejä"
+
+#: inc/taxonomies.php:1455
+msgid ""
+"Used when indicating that there are no terms in the given taxonomy "
+"associated with an object."
+msgstr ""
+"Käytetään, kun osoitetaan, että annettuun taksonomiaan ei liity termejä, "
+"jotka liittyvät objektiin."
+
+#: inc/taxonomies.php:1462
+#, php-format
+msgid "No %s"
+msgstr "Ei %s"
+
+#: inc/taxonomies.php:1474
+msgid "(e.g. Jobs list navigation)"
+msgstr "(esim. Työpaikkalistan navigointi)"
+
+#: inc/taxonomies.php:1478
+msgid "Items List Navigation"
+msgstr "Kohteiden luettelon navigointi"
+
+#: inc/taxonomies.php:1479
+msgid "Screen reader text for the pagination heading on the term listing screen."
+msgstr "Ruudunlukijan teksti sivunumeroinnin otsikolle termiluettelon näytöllä."
+
+#: inc/taxonomies.php:1486
+#, php-format
+msgid "%s list navigation"
+msgstr "%s luettelon navigointi"
+
+#: inc/taxonomies.php:1501
+msgid "(e.g. Jobs list)"
+msgstr "(esim. Työpaikkalista)"
+
+#: inc/taxonomies.php:1502
+msgid "Items List"
+msgstr "Kohteiden lista"
+
+#: inc/taxonomies.php:1503
+msgid "Screen reader text for the items list heading on the term listing screen."
+msgstr "Ruudunlukijan teksti kohteiden luettelon otsikolle termiluettelon näytöllä."
+
+#: inc/taxonomies.php:1510
+#, php-format
+msgid "%s list"
+msgstr "%s lista"
+
+#: inc/taxonomies.php:1522
+msgid "(e.g. No jobs found)"
+msgstr "(esim. Ei työpaikkoja löytynyt)"
+
+#: inc/taxonomies.php:1523
+msgid "Not Found"
+msgstr "Ei löytynyt"
+
+#: inc/taxonomies.php:1524
+msgid ""
+"The text displayed via clicking ‘Choose from the most used items’ in the "
+"taxonomy meta box when no items are available."
+msgstr ""
+"Teksti, joka näytetään napsautettaessa 'Valitse käytetyimmistä kohteista' "
+"taksonomia-meta-laatikossa, kun ei ole saatavilla kohteita."
+
+#: inc/taxonomies.php:1531
+#, php-format
+msgid "No %s found"
+msgstr "Ei %s löytynyt"
+
+#: inc/taxonomies.php:1543
+msgid "(e.g. &larr; Back to jobs"
+msgstr "(esim. &larr; Takaisin työpaikkoihin"
+
+#: inc/taxonomies.php:1547
+msgid "Back to Items"
+msgstr "Takaisin kohteisiin"
+
+#: inc/taxonomies.php:1548
+msgid ""
+"The text displayed after a term has been updated for a link back to main "
+"index."
+msgstr ""
+"Teksti, joka näytetään sen jälkeen, kun termi on päivitetty linkiksi "
+"takaisin pääindeksiin."
+
+#: inc/taxonomies.php:1555
+#, php-format
+msgid "Back to %s"
+msgstr "Takaisin %s"
+
+#: inc/taxonomies.php:1587
+msgid "Show in REST API"
+msgstr "Näytä REST API:ssa"
+
+#: inc/taxonomies.php:1588
+msgid "Add the taxonomy to the WordPress wp-json API."
+msgstr "Lisää taksonomia WordPressin wp-json API:iin."
+
+#: inc/taxonomies.php:1608
+msgid "REST API base slug"
+msgstr "REST API:n perus slug"
+
+#: inc/taxonomies.php:1609
+msgid "The base slug that this taxonomy will use in the REST API."
+msgstr "Perus slug, jota tämä taksonomia käyttää REST API:ssa."
+
+#: inc/taxonomies.php:1617
+msgid "REST API controller class"
+msgstr "REST API:n ohjausluokka"
+
+#: inc/taxonomies.php:1621
+msgid ""
+"The name of a custom Rest Controller class instead of "
+"WP_REST_Terms_Controller."
+msgstr "Mukautetun Rest Controller -luokan nimi WP_REST_Terms_Controllerin sijaan."
+
+#: inc/taxonomies.php:1622
+msgid "Custom controller to use instead of WP_REST_Terms_Controller."
+msgstr "Mukautettu ohjain, jota käytetään WP_REST_Terms_Controllerin sijaan."
+
+#: inc/taxonomies.php:1658
+msgid "Public"
+msgstr "Julkinen"
+
+#: inc/taxonomies.php:1659
+msgid "The taxonomy is for public use. It can be seen by frontend users."
+msgstr "Taksonomia on julkista käyttöä varten. Se on nähtävissä etupään käyttäjille."
+
+#: inc/taxonomies.php:1685
+msgid "Public Queryable"
+msgstr "Julkisesti kyseltävä"
+
+#: inc/taxonomies.php:1686
+msgid "The taxonomy is publicly queryable."
+msgstr "Taksonomia on julkisesti kyseltävissä."
+
+#: inc/taxonomies.php:1712
+msgid "Query Var"
+msgstr "Kyselymuuttuja"
+
+#: inc/taxonomies.php:1713
+msgid "Enable a custom query_var key for this taxonomy."
+msgstr "Ota käyttöön mukautettu query_var-avain tälle taksonomialle."
+
+#: inc/taxonomies.php:1726
+msgid "Custom Query Var String"
+msgstr "Mukautettu kyselymuuttujan merkkijono"
+
+#: inc/taxonomies.php:1727
+msgid "Sets a custom query_var slug for this taxonomy."
+msgstr "Asettaa mukautetun query_var-slugin tälle taksonomialle."
+
+#: inc/taxonomies.php:1738
+msgid "Metabox callback"
+msgstr "Metaboxin palautusfunktio"
+
+#: inc/taxonomies.php:1739
+msgid ""
+"Sets a callback function name for the meta box display. Hierarchical "
+"default: post_categories_meta_box, non-hierarchical default: "
+"post_tags_meta_box. To remove the metabox completely, use \"false\"."
+msgstr ""
+"Asettaa palautusfunktion nimen metalaatikon näyttämiselle. Hierarkinen "
+"oletus: post_categories_meta_box, ei-hierarkinen oletus: "
+"post_tags_meta_box. Poistaaksesi metalaatikon kokonaan, käytä \"false\"."
+
+#: inc/taxonomies.php:1750
+msgid "Categories"
+msgstr "Kategoriat"
+
+#: inc/taxonomies.php:1758
+#, php-format
+msgid ""
+"This feature controls the order of %s when you're editing posts, and in "
+"frontend displays."
+msgstr ""
+"Tämä ominaisuus ohjaa %s:n järjestystä, kun muokkaat viestejä ja etupään "
+"näytöissä."
+
+#: inc/taxonomies.php:1768
+msgid "Enable TaxoPress ordering"
+msgstr "Ota TaxoPress -järjestely käyttöön"
+
+#: inc/taxonomies.php:1773
+msgid "Enable TaxoPress ordering for this taxonomy in the frontend and admin area."
+msgstr "Ota TaxoPress -järjestely käyttöön tälle taxonomy etu- ja hallinta-alueella."
+
+#: inc/taxonomies.php:1823
+msgid "Re-activate Taxonomy"
+msgstr "Aktivoi Taxonomy uudelleen"
+
+#: inc/taxonomies.php:1826
+msgid "Deactivate Taxonomy"
+msgstr "Deaktivoi Taxonomy"
+
+#: inc/taxonomies.php:1840
+msgid "Delete Taxonomy"
+msgstr "Poista Taxonomy"
+
+#: inc/taxonomies.php:1848
+msgid "Delete TaxoPress Edit Data"
+msgstr "Poista TaxoPress Muokkaa Tiedot"
+
+#: inc/taxonomies.php:1851
+msgid ""
+"You can only delete taxonomies created with TaxoPress. However, you can "
+"delete any changes or edit made from TaxoPress which will remove TaxoPress "
+"version edit restoring original taxonomies data or removing it if already "
+"deleted"
+msgstr ""
+"Voit poistaa vain TaxoPressilla luotuja taxonomioita. Voit kuitenkin "
+"poistaa kaikki muutokset tai muokkaukset, jotka on tehty TaxoPressilla, "
+"mikä poistaa TaxoPressin version muokkauksen palauttamalla alkuperäiset "
+"taxonomy-tiedot tai poistamalla ne, jos ne on jo poistettu "
+
+#: inc/taxonomies.php:1918
+msgid "Save Taxonomy"
+msgstr "Tallenna Taxonomy"
+
+#: inc/taxonomies.php:1933
+msgid "Add Taxonomy"
+msgstr "Lisää Taxonomy"
+
+#: inc/terms-functions.php:243
+msgid "Term copied successfully."
+msgstr "Termi kopioitu onnistuneesti."
+
+#: inc/terms-functions.php:252
+#: inc/terms-table.php:922
+msgid "Term deleted successfully."
+msgstr "Termi poistettu onnistuneesti."
+
+#: inc/terms-functions.php:261
+msgid "Term removed from all posts successfully."
+msgstr "Termi poistettu kaikista viesteistä onnistuneesti."
+
+#: inc/terms-table.php:734
+#: inc/terms-table.php:748
+#: modules/taxopress-ai/taxopress-ai.php:1625
+msgid "Count"
+msgstr "Luku"
+
+#: inc/terms-table.php:744
+msgid "Custom URL"
+msgstr "Mukautettu URL"
+
+#: inc/terms-table.php:745
+#: includes-core/TaxopressCoreAdmin.php:592
+msgid "Synonyms"
+msgstr "Synonyymit"
+
+#: inc/terms-table.php:746
+#: includes-core/TaxopressCoreAdmin.php:550
+msgid "Linked Terms"
+msgstr "Linkitetyt termit"
+
+#: inc/terms-table.php:747
+msgid "Status"
+msgstr "Tila"
+
+#: inc/terms-table.php:801
+#: inc/terms-table.php:1181
+#: includes-core/TaxopressCoreAdmin.php:329
+msgid "Copy"
+msgstr "Kopioi"
+
+#: inc/terms-table.php:841
+msgid "Select Destination Taxonomy"
+msgstr "Valitse kohde Taxonomy"
+
+#: inc/terms-table.php:847
+msgid "Search posts"
+msgstr "Hae viestejä"
+
+#: inc/terms-table.php:849
+msgid "post type"
+msgstr "post type"
+
+#: inc/terms-table.php:851
+#, php-format
+msgid "Select Destination %s"
+msgstr "Valitse kohde %s"
+
+#: inc/terms-table.php:881
+msgid "Filter"
+msgstr "Suodata"
+
+#: inc/terms-table.php:919
+msgid "Terms deleted successfully."
+msgstr "Termi(t) poistettu onnistuneesti."
+
+#: inc/terms-table.php:949
+msgid "Term(s) copied successfully."
+msgstr "Termi(t) kopioitu onnistuneesti."
+
+#: inc/terms-table.php:967
+msgid "Hidden"
+msgstr "Piilotettu"
+
+#: inc/terms-table.php:970
+msgid "Live"
+msgstr "Elävä"
+
+#: inc/terms-table.php:989
+msgid "No terms found."
+msgstr "Ei termejä löytynyt."
+
+#: inc/terms-table.php:1128
+#. translators: %s: Taxonomy term name.
+#, php-format
+msgid "Quick edit &#8220;%s&#8221; inline"
+msgstr "Nopea muokkaus &#8220;%s&#8221; rivissä"
+
+#: inc/terms-table.php:1129
+msgid "Quick&nbsp;Edit"
+msgstr "Nopea&nbsp;muokkaus"
+
+#: inc/terms-table.php:1144
+msgid "Remove From All Posts"
+msgstr "Poista kaikista viesteistä"
+
+#: inc/terms-table.php:1167
+msgid "View"
+msgstr "Näytä"
+
+#: inc/terms-table.php:1396
+msgid "Quick Edit"
+msgstr "Nopea muokkaus"
+
+#: inc/terms-table.php:1423
+msgid "Cancel"
+msgstr "Peruuta"
+
+#: inc/terms-table.php:1424
+msgid "Update"
+msgstr "Päivitä"
+
+#: inc/terms.php:172
+#: inc/terms.php:173
+#: inc/terms.php:239
+#: inc/terms.php:273
+msgid "Terms"
+msgstr "Termit"
+
+#: inc/terms.php:241
+#: inc/terms.php:282
+msgid "This screen allows you to search and edit all the terms on your site."
+msgstr ""
+"Tämä näyttö mahdollistaa kaikkien sivustosi termien hakemisen ja "
+"muokkaamisen."
+
+#: inc/terms.php:280
+msgid "This screen allows you to order terms via drag and drop."
+msgstr "Tämä näyttö mahdollistaa termien järjestämisen raahaamalla ja pudottamalla."
+
+#: inc/terms.php:309
+msgid "Search Terms"
+msgstr "Hae termejä"
+
+#: inc/utilities.php:10
+#: inc/utilities.php:12
+#: inc/utilities.php:34
+msgid "Media Tags"
+msgstr "Media-tunnisteet"
+
+#: inc/utilities.php:11, fuzzy
+msgid "Media Tag"
+msgstr "Media Tag"
+
+#: inc/utilities.php:13
+msgid "All Media Tags"
+msgstr "Kaikki Media Tagit"
+
+#: inc/utilities.php:14
+msgid "Edit Media Tag"
+msgstr "Muokkaa Media Tagia"
+
+#: inc/utilities.php:15
+msgid "View Media Tag"
+msgstr "Näytä Media Tag"
+
+#: inc/utilities.php:16
+msgid "Update Media Tag name"
+msgstr "Päivitä Media Tagin nimi"
+
+#: inc/utilities.php:17
+msgid "Add new Media Tag"
+msgstr "Lisää uusi Media Tag"
+
+#: inc/utilities.php:18
+msgid "New Media Tag name"
+msgstr "Uuden Media Tagin nimi"
+
+#: inc/utilities.php:19
+msgid "Parent Media Tag"
+msgstr "Vanhempi Media Tag"
+
+#: inc/utilities.php:20
+msgid "Parent Media Tag:"
+msgstr "Vanhempi Media Tag:"
+
+#: inc/utilities.php:21
+msgid "Search Media Tags"
+msgstr "Etsi Media Tagit"
+
+#: inc/utilities.php:22
+msgid "Popular Media Tags"
+msgstr "Suositut Media Tagit"
+
+#: inc/utilities.php:23
+msgid "Separate Media Tags with commas"
+msgstr "Erottele Media Tagit pilkuilla"
+
+#: inc/utilities.php:24
+msgid "Add or remove Media Tags"
+msgstr "Lisää tai poista Media Tagit"
+
+#: inc/utilities.php:25
+msgid "Choose from the most used Media Tags"
+msgstr "Valitse käytetyimmistä Media Tagista"
+
+#: inc/utilities.php:26
+msgid "No Media Tags found"
+msgstr "Ei Media Tagia löytynyt"
+
+#: inc/utilities.php:27
+msgid "No Media Tags"
+msgstr "Ei Media Tagia"
+
+#: inc/utilities.php:28
+msgid "Media Tags list navigation"
+msgstr "Media Tagien luettelon navigointi"
+
+#: inc/utilities.php:29
+msgid "Media Tags list"
+msgstr "Media Tagien lista"
+
+#: inc/utilities.php:30
+msgid "Back to Media Tags"
+msgstr "Takaisin Media Tagien luetteloon"
+
+#: inc/utilities.php:62
+#: inc/utilities.php:63
+#: inc/utilities.php:65
+#: inc/utilities.php:70
+msgid "TaxoPress Logs"
+msgstr "TaxoPress Lokit"
+
+#: inc/utilities.php:64
+msgid "Search TaxoPress Logs"
+msgstr "Etsi TaxoPress-lokit"
+
+#: inc/utilities.php:66
+msgid "Edit TaxoPress Logs"
+msgstr "Muokkaa TaxoPress-lokit"
+
+#: inc/utilities.php:67
+msgid "Update TaxoPress Logs"
+msgstr "Päivitä TaxoPress-lokit"
+
+#: inc/utilities.php:68
+msgid "Add New TaxoPress Logs"
+msgstr "Lisää uusia TaxoPress-lokit"
+
+#: inc/utilities.php:69
+msgid "New TaxoPress Logs"
+msgstr "Uudet TaxoPress-lokit"
+
+#: includes-core/TaxopressCoreAdmin.php:17
+#, php-format
+msgid ""
+"You're using TaxoPress Free. The Pro version has more features and support. "
+"%sUpgrade to Pro%s"
+msgstr ""
+"Käytät TaxoPress Free -versiota. Pro-versiossa on enemmän ominaisuuksia ja "
+"tukea. %sPäivitä Pro:hon%s"
+
+#: includes-core/TaxopressCoreAdmin.php:114
+msgid "Upgrade to TaxoPress Pro"
+msgstr "Päivitä TaxoPress Pro:hon"
+
+#: includes-core/TaxopressCoreAdmin.php:119
+msgid "Enhance the power of TaxoPress with the Pro version:"
+msgstr "Paranna TaxoPressin tehoa Pro-version avulla:"
+
+#: includes-core/TaxopressCoreAdmin.php:122
+msgid "Unlimited “Term Display”"
+msgstr "Rajoittamaton \"Termi-näyttö\""
+
+#: includes-core/TaxopressCoreAdmin.php:123
+msgid "Unlimited “Terms for Current Posts”"
+msgstr "Rajoittamaton \"Termit nykyisille julkaisuillesi\""
+
+#: includes-core/TaxopressCoreAdmin.php:124
+msgid "Unlimited “Related Posts”"
+msgstr "Rajoittamaton \"Liitetyt julkaisut\""
+
+#: includes-core/TaxopressCoreAdmin.php:125
+msgid "Unlimited “Auto Links”"
+msgstr "Rajoittamaton \"Automaattiset linkit\""
+
+#: includes-core/TaxopressCoreAdmin.php:126
+msgid "Unlimited “Auto Terms”"
+msgstr "Rajoittamaton \"Automaattiset termit\""
+
+#: includes-core/TaxopressCoreAdmin.php:127
+msgid "Create new terms using OpenAI and other sources"
+msgstr "Luo uusia termejä käyttäen OpenAI:ta ja muita lähteitä"
+
+#: includes-core/TaxopressCoreAdmin.php:128
+msgid "Use Linked Terms"
+msgstr "Käytä linkitettyjä termejä"
+
+#: includes-core/TaxopressCoreAdmin.php:129
+msgid "Use Synonyms"
+msgstr "Käytä synonyymejä"
+
+#: includes-core/TaxopressCoreAdmin.php:130
+msgid "Schedule Auto Terms to run automatically"
+msgstr "Aikatauluta automaattiset termit toimimaan automaattisesti"
+
+#: includes-core/TaxopressCoreAdmin.php:131
+msgid "Control the display of term metaboxes"
+msgstr "Hallinnoi termin metalaatikoiden näyttöä"
+
+#: includes-core/TaxopressCoreAdmin.php:132
+msgid "Fast, professional support"
+msgstr "Nopea, ammattilaismainen tuki"
+
+#: includes-core/TaxopressCoreAdmin.php:133
+msgid "No ads inside the plugin"
+msgstr "Ei mainoksia lisäosassa"
+
+#: includes-core/TaxopressCoreAdmin.php:143
+msgid "Need TaxoPress Support?"
+msgstr "Tarvitsetko TaxoPress-tukea?"
+
+#: includes-core/TaxopressCoreAdmin.php:148
+msgid "If you need help or have a new feature request, let us know."
+msgstr "Jos tarvitset apua tai sinulla on uusi ominaisuuspyyntö, kerro meille."
+
+#: includes-core/TaxopressCoreAdmin.php:150
+msgid "Request Support"
+msgstr "Pyydä tukea"
+
+#: includes-core/TaxopressCoreAdmin.php:157
+msgid "Detailed documentation is also available on the plugin website."
+msgstr ""
+"Yksityiskohtainen dokumentaatio on myös saatavilla liitteen "
+"verkkosivustolla."
+
+#: includes-core/TaxopressCoreAdmin.php:159
+msgid "View Knowledge Base"
+msgstr "Näytä tietopankki"
+
+#: includes-core/TaxopressCoreAdmin.php:182
+msgid "OpenAI Integration"
+msgstr "OpenAI-integraatio"
+
+#: includes-core/TaxopressCoreAdmin.php:187
+msgid ""
+"TaxoPress Pro allows you to integrate OpenAI to analyze your content and "
+"suggest terms."
+msgstr ""
+"TaxoPress Pro mahdollistaa OpenAI:n integroimisen sisällön analysoimiseksi "
+"ja termien ehdottamiseksi."
+
+#: includes-core/TaxopressCoreAdmin.php:206
+msgid "IBM Watson Integration"
+msgstr "IBM Watson -integraatio"
+
+#: includes-core/TaxopressCoreAdmin.php:211
+msgid ""
+"TaxoPress Pro allows you to integrate Watson to analyze your content and "
+"suggest terms."
+msgstr ""
+"TaxoPress Pro mahdollistaa Watsonin integroimisen sisällön analysoimiseksi "
+"ja termien ehdottamiseksi."
+
+#: includes-core/TaxopressCoreAdmin.php:230
+msgid "Dandelion Integration"
+msgstr "Voikukka-integraatio"
+
+#: includes-core/TaxopressCoreAdmin.php:235
+msgid ""
+"TaxoPress Pro allows you to integrate Dandelion to analyze your content and "
+"suggest terms."
+msgstr ""
+"TaxoPress Pro mahdollistaa Voikukan integroimisen sisällön analysoimiseksi "
+"ja termien ehdottamiseksi."
+
+#: includes-core/TaxopressCoreAdmin.php:254
+msgid "LSEG / Refinitiv Integration"
+msgstr "LSEG / Refinitiv -integraatio"
+
+#: includes-core/TaxopressCoreAdmin.php:259
+msgid ""
+"TaxoPress Pro allows you to integrate LSEG / Refinitiv to analyze your "
+"content and suggest terms."
+msgstr ""
+"TaxoPress Pro mahdollistaa LSEG / Refinitiv -integroimisen sisällön "
+"analysoimiseksi ja termien ehdottamiseksi."
+
+#: includes-core/TaxopressCoreAdmin.php:282
+#: includes-core/TaxopressCoreAdmin.php:299
+#: includes-core/TaxopressCoreAdmin.php:476
+msgid "Suggest terms using AI"
+msgstr "Ehdota termejä käyttäen tekoälyä"
+
+#: includes-core/TaxopressCoreAdmin.php:286
+msgid ""
+"TaxoPress Pro allows you to suggest new terms for your content using the "
+"OpenAI. This service can analyze your content and suggest new terms."
+msgstr ""
+"TaxoPress Pro mahdollistaa uusien termien ehdottamisen sisällöllesi "
+"käyttäen OpenAI:ta. Tämä palvelu voi analysoida sisältöäsi ja ehdottaa "
+"uusia termejä."
+
+#: includes-core/TaxopressCoreAdmin.php:304
+msgid ""
+"TaxoPress Pro allows you to suggest new terms for your content using the "
+"IBM Watson. This service can analyze your content and suggest new terms."
+msgstr ""
+"TaxoPress Pro mahdollistaa uusien termien ehdottamisen sisällöllesi "
+"käyttäen IBM Watsonia. Tämä palvelu voi analysoida sisältöäsi ja ehdottaa "
+"uusia termejä."
+
+#: includes-core/TaxopressCoreAdmin.php:368
+msgid "Copy with Metadata"
+msgstr "Kopioi metatietojen kanssa"
+
+#: includes-core/TaxopressCoreAdmin.php:398
+#: includes-core/TaxopressCoreAdmin.php:416
+#: includes-core/TaxopressCoreAdmin.php:434
+#: includes-core/TaxopressCoreAdmin.php:452
+msgid "Auto terms using AI"
+msgstr "Automaattiset termit tekoälyn avulla"
+
+#: includes-core/TaxopressCoreAdmin.php:403
+#: includes-core/TaxopressCoreAdmin.php:421
+#: includes-core/TaxopressCoreAdmin.php:439
+#: includes-core/TaxopressCoreAdmin.php:457
+msgid ""
+"TaxoPress Pro allows you to generate new terms for your content using the "
+"OpenAI, IBM Watson, Dandelion and Open Calais services. These services can "
+"analyze your content and add new terms."
+msgstr ""
+"TaxoPress Pro mahdollistaa uusien termien generoimisen sisällöllesi "
+"käyttäen OpenAI:ta, IBM Watsonia, Voikukkaa ja Open Calais -palveluja. Nämä "
+"palvelut voivat analysoida sisältöäsi ja lisätä uusia termejä."
+
+#: includes-core/TaxopressCoreAdmin.php:481
+msgid ""
+"TaxoPress Pro allows you to suggest new terms for your content using the "
+"OpenAI, IBM Watson, Dandelion and Open Calais services. These services can "
+"analyze your content and suggest new terms."
+msgstr ""
+"TaxoPress Pro mahdollistaa uusien termien ehdottamisen sisällöllesi "
+"käyttäen OpenAI:ta, IBM Watsonia, Voikukkaa ja Open Calais -palveluja. Nämä "
+"palvelut voivat analysoida sisältöäsi ja ehdottaa uusia termejä."
+
+#: includes-core/TaxopressCoreAdmin.php:500
+msgid "Add Custom Elements"
+msgstr "Lisää mukautettuja elementtejä"
+
+#: includes-core/TaxopressCoreAdmin.php:505
+msgid ""
+"TaxoPress Pro allows you complete control over where Auto Links are added. "
+"You can choose to skip any HTML elements that appear in your content."
+msgstr ""
+"TaxoPress Pro antaa sinulle täydellisen hallinnan siitä, mihin Auto Links "
+"-linkit lisätään. Voit valita ohittaa kaikki HTML-elementit, jotka "
+"esiintyvät sisällössäsi."
+
+#: includes-core/TaxopressCoreAdmin.php:524
+msgid "Use Regular Expressions to modify Auto Terms"
+msgstr "Käytä säännöllisiä lausekkeita muokataksesi Auto Terms -termejä"
+
+#: includes-core/TaxopressCoreAdmin.php:529
+msgid ""
+"TaxoPress Pro allows you to change how Auto Terms analyzes your posts. You "
+"will need to know how to write Regular Expressions to use this feature."
+msgstr ""
+"TaxoPress Pro antaa sinun muuttaa tapaa, jolla Auto Terms analysoi "
+"julkaisuasi. Sinun on tiedettävä, miten kirjoittaa säännöllisiä lausekkeita "
+"käyttääksesi tätä ominaisuutta."
+
+#: includes-core/TaxopressCoreAdmin.php:551
+msgid ""
+"This feature allows you to connect terms. When the main term or any of "
+"these terms are added to the post, all the other terms will be added also."
+msgstr ""
+"Tämä ominaisuus mahdollistaa termien yhdistämisen. Kun päätermi tai mikä "
+"tahansa näistä termeistä lisätään julkaisuun, kaikki muut termit lisätään "
+"myös."
+
+#: includes-core/TaxopressCoreAdmin.php:571
+msgid "Linked Terms Feature"
+msgstr "Linkitetyt termit -ominaisuus"
+
+#: includes-core/TaxopressCoreAdmin.php:575
+msgid ""
+"TaxoPress Pro allows you to create powerful connections between your terms. "
+"When one term is added to a post, its linked terms can be automatically "
+"added too. This helps maintain consistent organization across your content."
+msgstr ""
+"TaxoPress Pro sallii sinun luoda voimakkaita yhteyksiä termiesi välille. "
+"Kun yksi termi lisätään julkaisuun, sen linkitetyt termit voidaan myös "
+"lisätä automaattisesti. Tämä auttaa ylläpitämään johdonmukaista järjestelyä "
+"sisällössäsi."
+
+#: includes-core/TaxopressCoreAdmin.php:593
+msgid ""
+"This feature allows you to associate additional words with each term. For "
+"example, \"website\" can have synonyms such as \"websites\", \"web site\", "
+"and \"web pages\"."
+msgstr ""
+"Tämä ominaisuus mahdollistaa lisäsanojen liittämisen kuhunkin termiin. "
+"Esimerkiksi \"website\" voi sisältää synonyymejä, kuten \"websites\", \"web "
+"site\" ja \"web pages\"."
+
+#: includes-core/TaxopressCoreAdmin.php:609
+msgid "Synonyms Terms Feature"
+msgstr "Synonyymitermejä koskeva ominaisuus"
+
+#: includes-core/TaxopressCoreAdmin.php:613
+msgid ""
+"TaxoPress Pro allows you to have multiple words associated with a single "
+"term. If TaxoPress scans your content and finds a synonym, it will act as "
+"if it has found the main term."
+msgstr ""
+"TaxoPress Pro mahdollistaa useiden sanojen liittämisen yhteen termiin. Jos "
+"TaxoPress skannaa sisältöäsi ja löytää synonyymin, se toimii ikään kuin se "
+"olisi löytänyt päätermin."
+
+#: includes-core/TaxopressCoreAdmin.php:633
+msgid "Taxonomy Display"
+msgstr "Taksonomian näyttö"
+
+#: includes-core/TaxopressCoreAdmin.php:641
+#: includes-core/TaxopressCoreAdmin.php:730
+msgid "This feature is available in TaxoPress Pro"
+msgstr "Tämä ominaisuus on saatavilla TaxoPress Pro:ssa"
+
+#: includes-core/TaxopressCoreAdmin.php:646
+msgid "Customize the display of terms in the TaxoPress metabox."
+msgstr "Mukauta termien näyttöä TaxoPress-metaboksissa."
+
+#: includes-core/TaxopressCoreAdmin.php:647
+msgid "Options include checkboxes and a dropdown list."
+msgstr "Vaihtoehtoihin kuuluvat valintaruutu ja alasvetovalikko."
+
+#: includes-core/TaxopressCoreAdmin.php:681
+msgid "Copy Term with Metadata"
+msgstr "Kopioi termi metatietoineen"
+
+#: includes-core/TaxopressCoreAdmin.php:686
+msgid "To Copy terms with their metadata, please upgrade to pro."
+msgstr "Kopioidaksesi termejä metatietoineen, päivitä pro-versioon."
+
+#: includes-core/TaxopressCoreAdmin.php:687
+msgid ""
+"With TaxoPress Pro, you can duplicate taxonomy terms along with all their "
+"metadata. This includes term descriptions, images, and custom fields. You "
+"can copy terms between taxonomies to maintain consistent organization "
+"across your site."
+msgstr ""
+"TaxoPress Pro:n avulla voit kopioida taksonomiatekstejä kaikkine niiden "
+"metatietoineen. Tämä sisältää termien kuvaukset, kuvat ja mukautetut "
+"kentät. Voit kopioida termejä taksonomioiden välillä ylläpitääksesi "
+"johdonmukaista järjestelyä sivustollasi."
+
+#: includes-core/TaxopressCoreAdmin.php:734
+msgid ""
+"Choose the display formats of your terms, options include table list, "
+"ordered list, border-cloud and lots more."
+msgstr ""
+"Valitse termiesi näyttömuodot, vaihtoehtoina ovat taulukkoluettelo, "
+"järjestetty luettelo, rajapilvi ja paljon muuta."
+
+#: includes-core/TaxopressCoreAdmin.php:754
+msgid "Hourly"
+msgstr "Tunnissa"
+
+#: includes-core/TaxopressCoreAdmin.php:767
+msgid "Daily"
+msgstr "Päivittäin"
+
+#: includes-core/TaxopressCoreAdmin.php:775
+#: includes-core/TaxopressCoreAdmin.php:827
+msgid "Pro Feature"
+msgstr "Pro Ominaisuus"
+
+#: includes-core/TaxopressCoreAdmin.php:777
+#: includes-core/TaxopressCoreAdmin.php:829
+msgid "Some of these features are available in TaxoPress Pro"
+msgstr "Osa näistä ominaisuuksista on saatavilla TaxoPress Pro:ssa"
+
+#: includes-core/TaxopressCoreAdmin.php:787
+#: includes-core/TaxopressCoreAdmin.php:879
+#: includes-core/TaxopressCoreAdmin.php:904, fuzzy
+msgid "ID"
+msgstr "ID"
+
+#: includes-core/TaxopressCoreAdmin.php:788
+msgid "Name (Pro)"
+msgstr "Nimi (Pro)"
+
+#: includes-core/TaxopressCoreAdmin.php:789
+msgid "Counter (Pro)"
+msgstr "Laskuri (Pro)"
+
+#: includes-core/TaxopressCoreAdmin.php:790
+msgid "Random (Pro)"
+msgstr "Satunnainen (Pro)"
+
+#: includes-core/TaxopressCoreAdmin.php:791
+msgid "Term Order (Pro)"
+msgstr "Termien järjestys (Pro)"
+
+#: includes-core/TaxopressCoreAdmin.php:803
+#: includes-core/TaxopressCoreAdmin.php:950
+#: includes-core/TaxopressCoreAdmin.php:994
+msgid "Method for choosing terms for display"
+msgstr "Menetelmä termien valitsemiseksi näytettäväksi"
+
+#: includes-core/TaxopressCoreAdmin.php:878
+#: includes-core/TaxopressCoreAdmin.php:939
+#: includes-core/TaxopressCoreAdmin.php:983
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:112
+msgid "Name"
+msgstr "Nimi"
+
+#: includes-core/TaxopressCoreAdmin.php:880
+#: includes-core/TaxopressCoreAdmin.php:940
+#: includes-core/TaxopressCoreAdmin.php:984
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:113
+msgid "Counter"
+msgstr "Laskuri"
+
+#: includes-core/TaxopressCoreAdmin.php:882
+msgid "Term Order"
+msgstr "Termien järjestys"
+
+#: includes-core/TaxopressCoreAdmin.php:899
+msgid "Disabled"
+msgstr "Poistettu käytöstä"
+
+#: includes-core/TaxopressCoreAdmin.php:900
+msgid "You have disabled TaxoPress ordering"
+msgstr "Olet poistanut käytöstä TaxoPress-järjestyksen"
+
+#: includes-core/TaxopressCoreAdmin.php:906
+#, php-format
+msgid "Terms in this taxonomy are ordered by %s"
+msgstr "Tässä taksonomiassa termit on järjestetty %s:n mukaan"
+
+#: includes-core/TaxopressCoreAdmin.php:942
+#: includes-core/TaxopressCoreAdmin.php:986
+msgid "Term Order(Pro)"
+msgstr "Termien järjestys (Pro)"
+
+#: includes-core/TaxopressCoreAdmin.php:970
+#: includes-core/TaxopressCoreAdmin.php:1014
+msgid "Upgrade to TaxoPress Pro to use Term Order to manually order Terms"
+msgstr ""
+"Päivitä TaxoPress Pro:hon käyttääksesi Termien järjestystä termien "
+"manuaaliseen järjestämiseen"
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:61
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:741
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:968
+msgid "Request completed."
+msgstr "Pyyntö suoritettu."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:69
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:749
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:877
+msgid "Security error. Kindly reload this page and try again"
+msgstr "Turvavirhe. Lataa tämä sivu uudelleen ja yritä uudelleen"
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:75
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:755
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:883
+msgid "Permission error. You do not have permission to manage taxopress"
+msgstr "Oikeusvirhe. Sinulla ei ole oikeutta hallita TaxoPressia"
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:91
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:560
+msgid "Posts content and title is empty."
+msgstr "Viesti sisältö ja otsikko ovat tyhjät."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:98
+msgid "Permission error. You do not have permission to preview this post."
+msgstr "Oikeusvirhe. Sinulla ei ole oikeuksia esikatsella tätä viestiä."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:124
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:769
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:898
+#, php-format
+msgid ""
+"You do not have permission to manage this taxonomy. Enable Metabox Access "
+"Taxonomies for this role in %1sTaxoPress Settings%2s."
+msgstr ""
+"Sinulla ei ole oikeuksia hallita tätä taxonomya. Ota käyttöön Metabox "
+"Access Taxonomies tälle roolille %1sTaxoPress Settings%2s."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:237, fuzzy
+msgid "Term Results"
+msgstr "Term Results"
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:240
+msgid "No results found for this post with this taxonomy."
+msgstr "Tätä viestiä varten ei löytynyt tuloksia tälle taxonomylle."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:245
+msgid "Invalid Auto Term ID. Please save the settings before using preview."
+msgstr "Virheellinen Auto Term ID. Tallenna asetukset ennen esikatselun käyttämistä."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:250
+msgid "You must enable at least one AI integration source to use auto term preview."
+msgstr ""
+"Sinun on otettava käyttöön vähintään yksi AI-integraation lähde, jotta voit "
+"käyttää automaattista termiesikatselua."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:253
+msgid ""
+"This Auto Terms option is not enabled for metaboxes. Please enable it in "
+"the Auto Terms settings."
+msgstr ""
+"Tätä Auto Terms -vaihtoehtoa ei ole otettu käyttöön metaboxeille. Ota se "
+"käyttöön Auto Terms -asetuksissa."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:267
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:291
+#, php-format
+msgid "Click %1s to select or deselect them from this %2s."
+msgstr "Napsauta %1s valitaksesi tai poistaaksesi ne tästä %2s."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:280
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:283
+msgid "Suggest Existing Terms"
+msgstr "Ehdota olemassa olevia termejä"
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:299
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:302, fuzzy
+msgid "OpenAI"
+msgstr "OpenAI"
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:314
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:317, fuzzy
+msgid "IBM Watson"
+msgstr "IBM Watson"
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:329
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:332, fuzzy
+msgid "Dandelion"
+msgstr "Dandelion"
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:344
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:347, fuzzy
+msgid "LSEG / Refinitiv"
+msgstr "LSEG / Refinitiv"
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:356
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:406
+#, php-format
+msgid "Update %1s on this %2s"
+msgstr "Päivitä %1s tälle %2s"
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:425
+msgid "Existing Terms not found for the selected post type and taxonomies"
+msgstr "Olemassa olevia termejä ei löytynyt valitulle post typelle ja taxonomille"
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:491
+msgid ""
+"Existing Terms taxonomy is required. Kindly select taxonomies and save the "
+"settings before running preview."
+msgstr ""
+"Olemassa olevat Terms taxonomy on pakollinen. Valitse taxonomiat ja "
+"tallenna asetukset ennen esikatselun suorittamista."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:712
+msgid "Result from ajax request."
+msgstr "Tulostus ajax-pyynnöstä."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:718
+msgid "The selected taxonomy is not associated with the selected post type."
+msgstr "Valittua taxonomya ei ole liitetty valittuun post typeen."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:724
+msgid "No results found for this taxonomy."
+msgstr "Tälle taxonomylle ei löytynyt tuloksia."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:785
+msgid "You do not have permission to edit this post."
+msgstr "Sinulla ei ole oikeuksia muokata tätä viestiä."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:792
+#, php-format
+msgid "Click Term to select or deselect from this %1s"
+msgstr "Napsauta termiä valitaksesi tai poistaaksesi sen tästä %1s"
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:795
+msgid "Both Taxonomy and Post are required."
+msgstr "Sekä taxonomy että Post ovat pakollisia."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:843
+msgid "No new terms were selected or deselected."
+msgstr "Uusia termejä ei valittu tai poistettu."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:847
+#, php-format
+msgid "%1s terms added to this %2s."
+msgstr "%1s termejä lisätty tähän %2s."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:851
+#, php-format
+msgid "%1s terms removed from this %2s."
+msgstr "%1s termejä poistettu tästä %2s."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:913
+msgid "You do not have capability to manage this taxonomy."
+msgstr "Sinulla ei ole oikeuksia hallita tätä taxonomya."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:1013
+#, php-format
+msgid "Terms cannot contain the following characters: %s"
+msgstr "Termit eivät voi sisältää seuraavia merkkejä: %s"
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:1028
+#, php-format
+msgid "Terms must be at least %d characters long."
+msgstr "Termien on oltava vähintään %d merkkiä pitkiä."
+
+#: modules/taxopress-ai/classes/TaxoPressAiAjax.php:1034
+#, php-format
+msgid "Terms cannot exceed %d characters."
+msgstr "Termit eivät voi ylittää %d merkkiä."
+
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:29
+msgid "The Dandelion integration is disabled in the Legacy AI Sources settings."
+msgstr "Dandelion-integraatio on poistettu käytöstä Legacy AI Sources -asetuksissa."
+
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:35
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:117
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:150
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:240
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:274
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:370
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:430
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:628
+msgid "No matched result from the API Server."
+msgstr "API-palvelimelta ei löytynyt vastaavaa tulosta."
+
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:53
+msgid ""
+"The Dandelion integration requires an API Key. Please add your API Key in "
+"the Auto Term settings."
+msgstr ""
+"Dandelion-integraatio vaatii API-avaimen. Lisää API-avaimesi Auto Term "
+"-asetuksiin."
+
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:59
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:173
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:298
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:456
+msgid "Selected content is empty."
+msgstr "Valittu sisältö on tyhjää."
+
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:75
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:189
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:314
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:472
+msgid "Result from cache."
+msgstr "Tulos välimuistista."
+
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:99
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:215
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:349
+#, php-format
+msgid "API Error: %1s."
+msgstr "API-virhe: %1s."
+
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:108
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:230
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:360
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:616
+msgid "Result from api."
+msgstr "Tulos api:sta."
+
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:122
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:245
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:375
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:633
+msgid "Error establishing connection with the API server. Try again."
+msgstr "Virhe yhteyden luomisessa API-palvelimeen. Yritä uudelleen."
+
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:145
+msgid ""
+"The LSEG / Refinitiv integration is disabled in the Legacy AI Sources "
+"settings."
+msgstr ""
+"LSEG / Refinitiv -integraatio on poistettu käytöstä Legacy AI Sources "
+"-asetuksissa."
+
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:167
+msgid ""
+"The LSEG / Refinitiv integration requires an API Key. Please add your API "
+"Key in the Auto Term settings."
+msgstr ""
+"LSEG / Refinitiv -integraatio vaatii API-avaimen. Lisää API-avaimesi Auto "
+"Term -asetuksiin."
+
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:236
+msgid "API Error: No matched result for content."
+msgstr "API-virhe: Ei löytynyt vastaavaa tulosta sisällölle."
+
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:268
+msgid "The IBM Watson integration is disabled in the Legacy AI Sources settings."
+msgstr ""
+"IBM Watson -integraatio on poistettu käytöstä Legacy AI Sources "
+"-asetuksissa."
+
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:292
+msgid ""
+"The IBM Watson integration requires an API Key and URL. Please add your API "
+"Key in the Auto Term settings."
+msgstr ""
+"IBM Watson -integraatio vaatii API-avaimen ja URL-osoitteen. Lisää "
+"API-avaimesi Auto Term -asetuksiin."
+
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:450
+msgid ""
+"The OpenAI integration requires an API Key. Please add your API Key in the "
+"Auto Term settings."
+msgstr ""
+"OpenAI -integraatio vaatii API-avaimen. Lisää API-avaimesi Auto Term "
+"-asetuksiin."
+
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:495
+#, php-format
+msgid ""
+"Invalid placeholder(s) detected: {%s}. Valid placeholders are: {content}, "
+"{post_terms}, {site_terms}"
+msgstr ""
+"Virheellisiä paikansijoja havaittu: {%s}. Kelvolliset paikansijat ovat: "
+"{content}, {post_terms}, {site_terms}"
+
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:531
+msgid ""
+"You added {post_terms} in the prompt but your post does not contain any "
+"terms."
+msgstr "Lisäsit {post_terms} kehotteeseen, mutta viestissäsi ei ole mitään termejä."
+
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:534
+msgid ""
+"You added {site_terms} in the prompt but your site does not contain any "
+"terms for this taxonomy."
+msgstr ""
+"Lisäsit {site_terms} kehotteeseen, mutta sivustollasi ei ole mitään termejä "
+"tälle taksonomialle."
+
+#: modules/taxopress-ai/classes/TaxoPressAiApi.php:583
+msgid ""
+"Error: OpenAI says there is an issue with this API key. Please check your "
+"plan or billing details."
+msgstr ""
+"Virhe: OpenAI kertoo, että tässä API-avaimessa on ongelma. Tarkista "
+"suunnitelmasi tai laskutustietosi."
+
+#: modules/taxopress-ai/classes/TaxoPressAiFields.php:18
+#: modules/taxopress-ai/taxopress-ai.php:1355
+#: modules/taxopress-ai/taxopress-ai.php:1664
+msgid "Show All Existing Terms"
+msgstr "Näytä kaikki olemassa olevat termit"
+
+#: modules/taxopress-ai/classes/TaxoPressAiFields.php:23
+#: modules/taxopress-ai/taxopress-ai.php:1363
+#: modules/taxopress-ai/taxopress-ai.php:1665
+msgid "Manage Post Terms"
+msgstr "Hallitse postitermien"
+
+#: modules/taxopress-ai/classes/TaxoPressAiFields.php:28
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:54
+#: modules/taxopress-ai/taxopress-ai.php:1666
+msgid "Auto Terms"
+msgstr "Auto Termit"
+
+#: modules/taxopress-ai/classes/TaxoPressAiFields.php:33
+#: modules/taxopress-ai/taxopress-ai.php:1376
+#: modules/taxopress-ai/taxopress-ai.php:1667
+msgid "Create Terms"
+msgstr "Luo termejä"
+
+#: modules/taxopress-ai/classes/TaxoPressAiFields.php:38
+msgid "View Existing Terms"
+msgstr "Näytä olemassa olevat termit"
+
+#: modules/taxopress-ai/classes/TaxoPressAiFields.php:39
+msgid "This feature allows you to browse all the terms in a taxonomy."
+msgstr "Tämä toiminto sallii sinun selata kaikkia termejä taksonomiassa."
+
+#: modules/taxopress-ai/classes/TaxoPressAiFields.php:44
+msgid "View Current Post Terms"
+msgstr "Näytä nykyiset postitermit"
+
+#: modules/taxopress-ai/classes/TaxoPressAiFields.php:45
+msgid ""
+"This feature allows you to manage all the terms that are currently attached "
+"to a post."
+msgstr ""
+"Tämä toiminto sallii sinun hallita kaikkia termejä, jotka ovat tällä "
+"hetkellä liitettynä viestiin."
+
+#: modules/taxopress-ai/classes/TaxoPressAiFields.php:50
+#: modules/taxopress-ai/taxopress-ai.php:1528
+msgid "View Terms"
+msgstr "Näytä termit"
+
+#: modules/taxopress-ai/classes/TaxoPressAiFields.php:51
+msgid ""
+"This feature allows you to browse based on selected auto terms settings and "
+"sources."
+msgstr ""
+"Tämä toiminto sallii sinun selata valittujen auto termien asetusten ja "
+"lähteiden perusteella."
+
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:53
+msgid "Suggest Terms"
+msgstr "Ehdota termejä"
+
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:280
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:282
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:439
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:441
+#, php-format
+msgid "Select all %1s"
+msgstr "Valitse kaikki %1s"
+
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:280
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:282
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:439
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:441
+#, php-format
+msgid "Deselect all %1s"
+msgstr "Poista valinta kaikista %1s"
+
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:299
+#: modules/taxopress-ai/classes/TaxoPressAiUtilities.php:454
+#, php-format
+msgid "Select %1s"
+msgstr "Valitse %1s"
+
+#: modules/taxopress-ai/taxopress-ai.php:411
+msgid "Please choose a post to use with TaxoPress AI."
+msgstr "Valitse postaus, jota käytetään TaxoPress AI:n kanssa."
+
+#: modules/taxopress-ai/taxopress-ai.php:420
+#: modules/taxopress-ai/taxopress-ai.php:1716
+msgid "Label can't be empty."
+msgstr "Nimi ei voi olla tyhjö."
+
+#: modules/taxopress-ai/taxopress-ai.php:421
+msgid "Label can't exceed 30 characters."
+msgstr "Nimi ei voi ylittää 30 merkkiä."
+
+#: modules/taxopress-ai/taxopress-ai.php:422
+msgid "Unknown tab type."
+msgstr "Tuntematon välilehtityyppi."
+
+#: modules/taxopress-ai/taxopress-ai.php:423
+msgid "Error saving label."
+msgstr "Virhe tallentaessa nimeä."
+
+#: modules/taxopress-ai/taxopress-ai.php:424
+msgid "Please choose a post to preview."
+msgstr "Valitse postaus esikatseltavaksi."
+
+#: modules/taxopress-ai/taxopress-ai.php:440
+#: modules/taxopress-ai/taxopress-ai.php:441
+#: modules/taxopress-ai/taxopress-ai.php:473
+msgid "Metaboxes"
+msgstr "Metalaatikot"
+
+#: modules/taxopress-ai/taxopress-ai.php:466
+msgid "Metabox Settings"
+msgstr "Metalaatikon asetukset"
+
+#: modules/taxopress-ai/taxopress-ai.php:467
+msgid "Metabox Access"
+msgstr "Metalaatikon pääsy"
+
+#: modules/taxopress-ai/taxopress-ai.php:476
+msgid ""
+"This feature allows you to customize the metabox interface you see when "
+"adding terms to posts."
+msgstr ""
+"Tämä ominaisuus mahdollistaa metalaatikon käyttöliittymän mukauttamisen, "
+"jonka näet lisätessäsi termejä posteihin."
+
+#: modules/taxopress-ai/taxopress-ai.php:825
+#: modules/taxopress-ai/taxopress-ai.php:870
+#: modules/taxopress-ai/taxopress-ai.php:952
+#: views/admin/page-settings.php:53
+msgid "Save Changes"
+msgstr "Tallenna muutokset"
+
+#: modules/taxopress-ai/taxopress-ai.php:941
+msgid "Select..."
+msgstr "Valitse..."
+
+#: modules/taxopress-ai/taxopress-ai.php:1067
+#, php-format
+msgid "Select %s"
+msgstr "Valitse %s"
+
+#: modules/taxopress-ai/taxopress-ai.php:1129
+msgid "Invalid request."
+msgstr "Virheellinen pyyntö."
+
+#: modules/taxopress-ai/taxopress-ai.php:1161
+msgid "No terms in your WordPress database."
+msgstr "Ei termejä WordPress-tietokannassasi."
+
+#: modules/taxopress-ai/taxopress-ai.php:1172
+msgid "There's no content to scan."
+msgstr "Ei skannattavaa sisältöä."
+
+#: modules/taxopress-ai/taxopress-ai.php:1179
+msgid "No results from your WordPress database."
+msgstr "Ei tuloksia WordPress-tietokannastasi."
+
+#: modules/taxopress-ai/taxopress-ai.php:1221
+msgid "There are no terms that are relevant to your content."
+msgstr "Ei ole termejä, jotka ovat relevantteja sisällöllesi."
+
+#: modules/taxopress-ai/taxopress-ai.php:1271
+msgid "Tags"
+msgstr "Tunnisteet"
+
+#: modules/taxopress-ai/taxopress-ai.php:1470
+#, php-format
+msgid ""
+"This user does not have access to manage any of this post attached "
+"taxonomies. Enable Metabox Access Taxonomies for this role in %1sTaxoPress "
+"Settings%2s."
+msgstr ""
+"Tällä käyttäjällä ei ole pääsyä hallita mitään tämän postin liitettyjä "
+"taxonomioita. Ota käyttöön Metabox Pääsy Taxonomiat tälle roolille "
+"%1sTaxoPress Asetukset%2s."
+
+#: modules/taxopress-ai/taxopress-ai.php:1474
+msgid "No TaxoPress Metabox features are enabled for this post type."
+msgstr "Tälle postityypille ei ole käytössä mitään TaxoPress Metabox -ominaisuuksia."
+
+#: modules/taxopress-ai/taxopress-ai.php:1502
+msgid "Save, You can also press Enter to save and escape to cancel"
+msgstr "Tallenna, voit myös painaa Enter tallentaaksesi ja Esc peruuttaaksesi"
+
+#: modules/taxopress-ai/taxopress-ai.php:1544
+msgid "Search Terms..."
+msgstr "Haku termejä..."
+
+#: modules/taxopress-ai/taxopress-ai.php:1563
+#: modules/taxopress-ai/taxopress-ai.php:1583
+msgid "Create Term"
+msgstr "Luo termi"
+
+#: modules/taxopress-ai/taxopress-ai.php:1639
+msgid ""
+"You do not have the required capabilities to manage any of this post "
+"attached taxonomies."
+msgstr ""
+"Sinulla ei ole tarvittavia oikeuksia hallita mitään tämän postin liitettyjä "
+"taxonomioita."
+
+#: modules/taxopress-ai/taxopress-ai.php:1707
+msgid "You can not edit this label."
+msgstr "Et voi muokata tätä nimeä."
+
+#: modules/taxopress-ai/taxopress-ai.php:1710
+msgid "Invalid nonce token."
+msgstr "Virheellinen nonce-tunnus."
+
+#: modules/taxopress-ai/taxopress-ai.php:1719
+msgid "Label is too long."
+msgstr "Nimi on liian pitkä."
+
+#: review-request/review.php:281
+#, php-format
+msgid ""
+"Hey, you've been using TaxoPress for %s on your site. We hope the plugin "
+"has been useful. Please could you quickly leave a 5-star rating on "
+"WordPress.org? It really does help to keep TaxoPress growing."
+msgstr ""
+"Hei, olet käyttänyt TaxoPressia %s sivustollasi. Toivomme, että lisäosa on "
+"ollut hyödyllinen. Voisitko nopeasti jättää 5 tähden arvostelun "
+"WordPress.orgissa? Se todella auttaa pitämään TaxoPressin kasvamassa."
+
+#: review-request/review.php:290
+msgid "1 week"
+msgstr "1 viikko"
+
+#: review-request/review.php:306
+msgid "3 months"
+msgstr "3 kuukautta"
+
+#: review-request/review.php:371
+msgid "Click here to add your rating for TaxoPress"
+msgstr "Klikkaa täällä lisätäksesi arvostelusi TaxoPressille"
+
+#: review-request/review.php:373
+msgid "Maybe later"
+msgstr "Ehkä myöhemmin"
+
+#: review-request/review.php:375
+msgid "I already did"
+msgstr "Tein sen jo"
+
+#: simple-tags.php:97
+msgid "This plugin can be deleted."
+msgstr "Tämä lisäosa voidaan poistaa."
+
+#: simple-tags.php:125
+msgid ""
+"TaxoPress was not activated because TaxoPress Pro is already active. Please "
+"keep only TaxoPress Pro enabled."
+msgstr ""
+"TaxoPressia ei aktivoitu, koska TaxoPress Pro on jo aktiivinen. Pidä vain "
+"TaxoPress Pro käytössä."
+
+#: views/admin/page-settings.php:4
+msgid "TaxoPress: Options"
+msgstr "TaxoPress: Asetukset"
+
+#: inc/terms-table.php:1399
+msgctxt "term name"
+msgid "Name"
+msgstr "Nimi"
+
+#: inc/terms-table.php:1408
+msgctxt "term name"
+msgid "Taxonomy"
+msgstr "Taxonomy"
